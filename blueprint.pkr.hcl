@@ -101,20 +101,20 @@ build {
     ]
   }
 
-  post-processors {
-    provisioner "shell" {
-      inline = [
-        "echo 'Starting .tgz extraction process'",
-        "find /opt/paper -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
-        "  echo \"Extracting $file\"",
-        "  tar -xzvf \"$file\" -C /opt/paper",
-        "  rm \"$file\"",
-        "  echo \"Extracted and removed $file\"",
-        "done",
-        "echo 'Extraction process completed'"
-      ]
-    }
+  provisioner "shell" {
+    inline = [
+      "echo 'Starting .tgz extraction process'",
+      "find /opt/paper -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
+      "  echo \"Extracting $file\"",
+      "  tar -xzvf \"$file\" -C /opt/paper",
+      "  rm \"$file\"",
+      "  echo \"Extracted and removed $file\"",
+      "done",
+      "echo 'Extraction process completed'"
+    ]
+  }
 
+  post-processors {
     post-processor "docker-tag" {
       repository = "ghcr.io/spacechunks/blueprints/${var.name}"
       tags = ["${var.version}"]
