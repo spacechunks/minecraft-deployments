@@ -1,0 +1,9 @@
+{
+  "name": "lobby",
+  "version": "v0.25.3",
+  "paper_version": "1.21.1-74",
+  "files": [
+    { "source": "oci-registry/main.go", "destination": "/opt/paper/main.go" },
+    { "source": "oci-registry/main.go", "destination": "/opt/paper/lolo.go" }
+  ]
+}
