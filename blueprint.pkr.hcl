@@ -108,8 +108,8 @@ build {
     }
 
     post-processor "docker-push" {
-      login_username = "${var.oci_reg_user}"
-      login_password = "${var.oci-reg_pass}"
+      login_username = var.oci_reg_user
+      login_password = var.oci_reg_pass
       login_server = "ghcr.io"
       login = true
     }
