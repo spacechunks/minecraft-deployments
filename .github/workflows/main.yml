@@ -1,0 +1,18 @@
+#on:
+#  push:
+#    branches:
+#      - main
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    env:
+#      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
+#      BUILD_OCI_REG_PASS: ${{ secrets.GITHUB_TOKEN }}
+#      BUILD_OCI_REG_SERVER: ghcr.io
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: hashicorp-contrib/setup-packer@v1
+#      - name: Init Packer
+#        run: packer init .
+#      - name: Run build script
+#        run: ./scripts/build.sh
