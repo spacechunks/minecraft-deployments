@@ -6,6 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     env:
       BUILD_OCI_REG_USER: ${{ github.repository_owner }}
       BUILD_OCI_REG_PASS: ${{ secrets.GITHUB_TOKEN }}
