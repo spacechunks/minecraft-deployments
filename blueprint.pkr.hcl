@@ -102,6 +102,13 @@ build {
   }
 
   post-processors {
+    post-processor "shell-local" {
+      inline = [
+        "docker run --rm -v /tmp/unzip_workspace:/workspace {{.Image}} /bin/sh -c 'find /opt/paper -name \"*.tgz\" -exec tar -xzvf {} -C /opt/paper \\; -exec rm {} \\;'",
+        "docker commit {{.ID}} {{.Image}}"
+      ]
+    }
+
     post-processor "docker-tag" {
       repository = "ghcr.io/spacechunks/blueprints/${var.name}"
       tags = ["${var.version}"]
