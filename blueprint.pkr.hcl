@@ -104,6 +104,12 @@ build {
   post-processors {
     post-processor "shell-local" {
       inline = [
+        "docker run --rm {{.Image}} /bin/sh -c 'echo \"Image contents:\"; ls -R /opt/paper; echo \"Searching for .tgz files:\"; find /opt/paper -name \"*.tgz\"'"
+      ]
+    }
+
+    post-processor "shell-local" {
+      inline = [
         "docker run --rm {{.Image}} /bin/sh -c 'if [ -n \"$(find /opt/paper -name \\\"*.tgz\\\")\" ]; then find /opt/paper -name \"*.tgz\" -exec tar -xzvf {} -C /opt/paper \\; -exec rm {} \\; && echo \"Extracted and removed .tgz files\"; else echo \"No .tgz files found\"; fi'",
         "docker commit {{.ID}} {{.Image}}"
       ]
