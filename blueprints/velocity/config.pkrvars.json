@@ -1,0 +1,15 @@
+{
+  "name": "velocity",
+  "version": "2024.39.1",
+  "paper_version": "3.3.0-SNAPSHOT-436",
+  "files": [
+    {
+      "source": "spc-mc/velocity/plugins/Maintenance-Velocity-4.3.0.jar",
+      "destination": "/opt/velocity/plugins/Maintenance-Velocity-4.3.0.jar"
+    },
+    {
+      "source": "spc-mc/velocity/plugins/minimotd-velocity-2.1.3.jar",
+      "destination": "/opt/velocity/plugins/minimotd-velocity-2.1.3.jar"
+    }
+  ]
+}
