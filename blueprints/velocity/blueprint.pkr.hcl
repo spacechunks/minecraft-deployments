@@ -36,9 +36,9 @@ variable "s3_endpoint" {
   default = env("BUILD_S3_ENDPOINT")
 }
 
-variable "paper_version" {
+variable "velocity_version" {
   type = string
-  default = env("BUILD_PAPER_VERSION")
+  default = env("BUILD_VELOCITY_VERSION")
 }
 
 variable "files" {
@@ -104,9 +104,9 @@ build {
   provisioner "shell" {
     inline = [
       "echo 'Starting .tgz extraction process'",
-      "find /opt/paper -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
+      "find /opt/velocity -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
       "  echo \"Extracting $file\"",
-      "  tar -xzvf \"$file\" -C /opt/paper",
+      "  tar -xzvf \"$file\" -C /opt/velocity",
       "  rm \"$file\"",
       "  echo \"Extracted and removed $file\"",
       "done",
