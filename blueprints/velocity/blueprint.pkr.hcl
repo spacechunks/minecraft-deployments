@@ -59,6 +59,7 @@ variable "version" {
 source "docker" "velocity" {
   image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
   commit = "true"
+  // specify, because the default command will override our entrypoint
   run_command = ["-d", "-i", "-t", "{{.Image}}"]
 }
 
@@ -98,19 +99,6 @@ build {
   provisioner "shell-local" {
     inline = [
       "mv /tmp/blueprint.hcl blueprint.pkr.hcl"
-    ]
-  }
-
-  provisioner "shell" {
-    inline = [
-      "echo 'Starting .tgz extraction process'",
-      "find /opt/velocity -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
-      "  echo \"Extracting $file\"",
-      "  tar -xzvf \"$file\" -C /opt/velocity",
-      "  rm \"$file\"",
-      "  echo \"Extracted and removed $file\"",
-      "done",
-      "echo 'Extraction process completed'"
     ]
   }
 
