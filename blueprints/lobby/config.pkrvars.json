@@ -1,8 +1,11 @@
 {
   "name": "lobby",
-  "version": "2024.37.1",
+  "version": "2024.39.2",
   "paper_version": "1.21.1-74",
   "files": [
-    { "source": "spc-mc/test/file.tgz", "destination": "/opt/paper/test-file.tgz" }
+    {
+      "source": "spc-mc/paper/shared/plugins/LuckPerms-Bukkit-5.4.141.jar",
+      "destination": "/opt/paper/plugins/LuckPerms-Bukkit-5.4.141.jar"
+    }
   ]
 }
