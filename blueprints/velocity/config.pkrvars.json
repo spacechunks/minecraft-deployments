@@ -1,7 +1,7 @@
 {
   "name": "velocity",
-  "version": "2024.39.5",
-  "velocity_version": "3.3.0-SNAPSHOT-436",
+  "version": "2025.13.1",
+  "velocity_version": "3.4.0-SNAPSHOT-482",
   "files": [
     {
       "source": "spc-mc/velocity/plugins/Maintenance-Velocity-4.3.0.jar",
