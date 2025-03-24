@@ -5,7 +5,7 @@ packer {
       source = "github.com/hashicorp/docker"
     }
     s3 = {
-      version = ">= 1.0.0"
+      version = "2.0.2"
       source = "github.com/spacechunks/s3"
     }
   }
@@ -19,21 +19,6 @@ variable "oci_reg_user" {
 variable "oci_reg_pass" {
   type = string
   default = env("BUILD_OCI_REG_PASS")
-}
-
-variable "s3_access_key" {
-  type = string
-  default = env("BUILD_S3_ACCESS_KEY")
-}
-
-variable "s3_secret_key" {
-  type = string
-  default = env("BUILD_S3_SECRET_KEY")
-}
-
-variable "s3_endpoint" {
-  type = string
-  default = env("BUILD_S3_ENDPOINT")
 }
 
 variable "velocity_version" {
@@ -85,9 +70,6 @@ build {
     for_each = var.files
     labels = ["s3"]
     content {
-      access_key = var.s3_access_key
-      secret_key = var.s3_secret_key
-      endpoint = var.s3_endpoint
       objects {
         source = provisioner.value.source
         destination = provisioner.value.destination
