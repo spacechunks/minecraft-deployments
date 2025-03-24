@@ -41,16 +41,26 @@ variable "version" {
   type = string
 }
 
-source "docker" "velocity" {
+source "docker" "arm64" {
   image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
   commit = "true"
+  platform = "linux/arm64"
+  // specify, because the default command will override our entrypoint
+  run_command = ["-d", "-i", "-t", "{{.Image}}"]
+}
+
+source "docker" "amd64" {
+  image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
+  commit = "true"
+  platform = "linux/amd64"
   // specify, because the default command will override our entrypoint
   run_command = ["-d", "-i", "-t", "{{.Image}}"]
 }
 
 build {
   sources = [
-    "source.docker.velocity"
+    "source.docker.arm64",
+    "source.docker.amd64"
   ]
 
   // move symlinks before uploading files
