@@ -21,21 +21,6 @@ variable "oci_reg_pass" {
   default = env("BUILD_OCI_REG_PASS")
 }
 
-variable "s3_access_key" {
-  type = string
-  default = env("BUILD_S3_ACCESS_KEY")
-}
-
-variable "s3_secret_key" {
-  type = string
-  default = env("BUILD_S3_SECRET_KEY")
-}
-
-variable "s3_endpoint" {
-  type = string
-  default = env("BUILD_S3_ENDPOINT")
-}
-
 variable "paper_version" {
   type = string
   default = env("BUILD_PAPER_VERSION")
@@ -56,15 +41,24 @@ variable "version" {
   type = string
 }
 
-source "docker" "paper" {
+source "docker" "arm64" {
   image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
   commit = "true"
+  platform = "linux/arm64"
+  run_command = ["-d", "-i", "-t", "{{.Image}}"]
+}
+
+source "docker" "amd64" {
+  image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
+  commit = "true"
+  platform = "linux/amd64"
   run_command = ["-d", "-i", "-t", "{{.Image}}"]
 }
 
 build {
   sources = [
-    "source.docker.paper"
+    "source.docker.arm64",
+    "source.docker.amd64"
   ]
 
   // move symlinks before uploading files
