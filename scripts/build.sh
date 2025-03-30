@@ -12,7 +12,7 @@ function build() {
     return
   fi
 
-  packer build -var-file=config.pkrvars.json .
+  packer build -parallel-builds=1 -var-file=config.pkrvars.json .
 }
 
 docker login $BUILD_OCI_REG_SERVER -u $BUILD_OCI_REG_USER -p $BUILD_OCI_REG_PASS
