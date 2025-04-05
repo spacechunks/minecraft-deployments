@@ -5,7 +5,7 @@ packer {
       source = "github.com/hashicorp/docker"
     }
     s3 = {
-      version = "2.0.2"
+      version = "2.0.3"
       source = "github.com/spacechunks/s3"
     }
   }
