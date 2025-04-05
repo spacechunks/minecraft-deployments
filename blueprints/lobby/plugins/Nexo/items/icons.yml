@@ -1,0 +1,82 @@
+chunk:
+  itemname: Chunk
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - chunkexplorer/item/icon/chunk.png
+    custom_model_data: 1000
+  Components:
+    hide_tooltip: true
+    max_stack_size: 1
+  Mechanics:
+    commands:
+      player:
+      - vk inventory chunk
+compass:
+  itemname: Compass
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - chunkexplorer/item/icon/compass.png
+    custom_model_data: 1001
+  Components:
+    hide_tooltip: true
+    max_stack_size: 1
+  Mechanics:
+    commands:
+      player:
+      - vk inventory compass
+balloons:
+  itemname: Balloons
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - chunkexplorer/item/icon/balloons.png
+    custom_model_data: 1002
+  Components:
+    hide_tooltip: true
+    max_stack_size: 1
+  Mechanics:
+    commands:
+      player:
+      - vk inventory party
+computer:
+  itemname: Computer
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - chunkexplorer/item/icon/computer.png
+    custom_model_data: 1003
+  Components:
+    hide_tooltip: true
+    max_stack_size: 1
+exit_door:
+  itemname: Exit Door
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - chunkexplorer/item/icon/exit_door.png
+    custom_model_data: 1004
+  Components:
+    hide_tooltip: true
+    max_stack_size: 1
+gear:
+  itemname: Gear
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - chunkexplorer/item/icon/gear.png
+    custom_model_data: 1005
+  Components:
+    hide_tooltip: true
+    max_stack_size: 1
+  Mechanics:
+    commands:
+      player:
+      - vk inventory settings

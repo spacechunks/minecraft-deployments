@@ -1,0 +1,14 @@
+{
+  "DO_NOT_ALTER_THIS_LINE":
+   "This file is for editing all languages at once. To, edit a specific language, use the corresponding file in the 'languages' folder.",
+
+
+  "connect.joining": "Trying to find Connection in Space",
+  "multiplayer.downloadingTerrain":"Downloading Chunks from Space",
+  "menu.game": "爱",
+  "menu.returnToGame": "Back to Exploring Chunks",
+  "menu.disconnect": "Return to Earth",
+  "container.inventory": "",
+  "container.crafting": "",
+  "menu.shareToLan": "chunks.space"
+}

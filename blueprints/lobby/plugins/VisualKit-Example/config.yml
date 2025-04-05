@@ -1,0 +1,23 @@
+action-bar: <#4e5c24>
+boss-bar:
+  content: ""
+  color: BLUE
+  overlay: PROGRESS
+  flags: []
+  progress: 1.0
+inventories:
+  - name: line-1
+    rows: 6
+    title: <#ff1234><font:explorer-ui:inv-1>Inventory</font>
+  - name: chunk
+    rows: 6
+    title: Chunk
+  - name: compass
+    rows: 6
+    title: Compass
+  - name: party
+    rows: 6
+    title: Party
+  - name: settings
+    rows: 6
+    title: Settings
