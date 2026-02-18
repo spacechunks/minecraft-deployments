@@ -1,19 +1,19 @@
 {
   "name": "velocity",
-  "version": "2025.14.8",
-  "velocity_version": "3.4.0-SNAPSHOT-489",
+  "version": "2026.08.1",
+  "velocity_version": "3.4.0-SNAPSHOT-538",
   "files": [
     {
-      "source": "spc-mc/velocity/plugins/Maintenance-Velocity-4.3.0.jar",
-      "destination": "/opt/velocity/plugins/Maintenance-Velocity-4.3.0.jar"
+      "source": "spc-mc/velocity/plugins/maintenance-velocity-4.3.0.jar",
+      "destination": "/opt/velocity/plugins/maintenance-velocity-4.3.0.jar"
     },
     {
       "source": "spc-mc/velocity/plugins/minimotd-velocity-2.1.3.jar",
       "destination": "/opt/velocity/plugins/minimotd-velocity-2.1.3.jar"
     },
     {
-      "source": "spc-mc/velocity/plugins/connection-velocity.jar",
-      "destination": "/opt/velocity/plugins/connection-velocity.jar"
+      "source": "spc-mc/velocity/plugins/viaversion-5.7.1.jar",
+      "destination": "/opt/velocity/plugins/viaversion-5.7.1.jar"
     }
   ]
 }
