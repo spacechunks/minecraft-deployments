@@ -21,9 +21,9 @@ variable "oci_reg_pass" {
   default = env("BUILD_OCI_REG_PASS")
 }
 
-variable "paper_version" {
+variable "velocity_version" {
   type = string
-  default = env("BUILD_PAPER_VERSION")
+  default = env("BUILD_VELOCITY_VERSION")
 }
 
 variable "files" {
@@ -42,14 +42,14 @@ variable "version" {
 }
 
 source "docker" "arm64" {
-  image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
+  image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
   commit = "true"
   platform = "linux/arm64"
   run_command = ["-d", "-i", "-t", "{{.Image}}"]
 }
 
 source "docker" "amd64" {
-  image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
+  image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
   commit = "true"
   platform = "linux/amd64"
   run_command = ["-d", "-i", "-t", "{{.Image}}"]
@@ -70,7 +70,7 @@ build {
   }
 
   provisioner "file" {
-    destination = "/opt/paper"
+    destination = "/opt/velocity"
     source = "."
   }
 
@@ -95,9 +95,9 @@ build {
   provisioner "shell" {
     inline = [
       "echo 'Starting .tgz extraction process'",
-      "find /opt/paper -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
+      "find /opt/velocity -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
       "  echo \"Extracting $file\"",
-      "  tar -xzvf \"$file\" -C /opt/paper",
+      "  tar -xzvf \"$file\" -C /opt/velocity",
       "  rm \"$file\"",
       "  echo \"Extracted and removed $file\"",
       "done",
