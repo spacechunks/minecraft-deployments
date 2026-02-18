@@ -5,7 +5,7 @@ packer {
       source = "github.com/hashicorp/docker"
     }
     s3 = {
-      version = "2.0.3"
+      version = "2.0.11"
       source = "github.com/spacechunks/s3"
     }
   }
@@ -78,9 +78,6 @@ build {
     for_each = var.files
     labels = ["s3"]
     content {
-      access_key = var.s3_access_key
-      secret_key = var.s3_secret_key
-      endpoint = var.s3_endpoint
       objects {
         source = provisioner.value.source
         destination = provisioner.value.destination
