@@ -22,7 +22,7 @@ maintenance-enabled: true
 
 # Enables maintenance on certain servers managed by your proxy instance(s).
 proxied-maintenance-servers:
-- PaperServer1
+  - PaperServer1
 # - AnotherServer
 
 # If maintenance is enabled on a proxied server with players on it, they will be sent to the fallback server instead of being kicked off the network.
@@ -32,7 +32,7 @@ fallback: lobby
 
 # If maintenance is enabled globally, you can define a "waiting" lobby for players to be sent to instead of being kicked.
 # Leave this empty to disable.
-waiting-server: ''
+waiting-server: ""
 
 # The message (MOTD) shown in the multiplayer server list motd when maintenance is enabled.
 # If you put in multiple entries, one of them will be chosen randomly on every ping.
@@ -40,12 +40,12 @@ waiting-server: ''
 ping-message:
   enabled: false
   messages:
-  - <red>Currently under maintenance<br><gradient:#fbffc2:#0fffff>We will be back soon!
+    - <red>Currently under maintenance<br><gradient:#fbffc2:#0fffff>We will be back soon!
   # If set to true and an endtimer is currently running, a message from this pool will be chosen
   # instead of the ones above, so you can have different messages for when an endtimer is running/not running.
   enable-timer-specific-messages: true
   timer-messages:
-  - <red>Currently under maintenance<br><gradient:#fbffc2:#fffff>Come back in:</gradient> <color:#aa55ee>%TIMER%
+    - <red>Currently under maintenance<br><gradient:#fbffc2:#fffff>Come back in:</gradient> <color:#aa55ee>%TIMER%
 
 # If enabled, the message below will be shown in the top right corner of the server in the server list, where the player count would normally be displayed.
 # You can use '%ONLINE%' and '%MAX%' if you want to include the player count in a custom message (e.g. "Maintenance %ONLINE%/%MAX%").
@@ -55,7 +55,7 @@ player-count-message:
   message: <dark_red>Maintenance
   # If set to true and an endtimer is currently running, the timer message will be used instead of the normal one.
   enable-timer-specific-message: false
-  timer-message: '<dark_red>Come back in: <yellow>%TIMER%'
+  timer-message: "<dark_red>Come back in: <yellow>%TIMER%"
 
 # Is shown when you move your mouse above the text in the top right corner of the server in the server list, where the player count would normally be displayed.
 # DOES NOT SUPPORT RGB!
@@ -103,20 +103,20 @@ continue-endtimer-after-restart:
 
 # If using the timer command: In what intervalls before enabling/disabling maintenance there will be a broadcast.
 timer-broadcast-for-seconds:
-- 1200
-- 900
-- 600
-- 300
-- 120
-- 60
-- 30
-- 20
-- 10
-- 5
-- 4
-- 3
-- 2
-- 1
+  - 1200
+  - 900
+  - 600
+  - 300
+  - 120
+  - 60
+  - 30
+  - 20
+  - 10
+  - 5
+  - 4
+  - 3
+  - 2
+  - 1
 
 # If you have 2 or more proxy instances, the database connection will make sure all proxies
 # have the same maintenance status, so you won't have to enable/disable it on every proxy by hand.
