@@ -1,0 +1,84 @@
+blueprint:
+  itemname: Blueprint
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1000
+    texture: chunkexplorer/block/blueprint.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 2
+      model: blueprint
+light_blueprint:
+  itemname: Light Blueprint
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1001
+    texture: chunkexplorer/block/blueprint.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 3
+      model: light_blueprint
+blue_iron_block:
+  itemname: Iron Block
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1002
+    texture: chunkexplorer/block/blue_iron_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 8
+      model: blue_iron_block
+green_iron_block:
+  itemname: Iron Block
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1003
+    texture: chunkexplorer/block/green_iron_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 4
+      model: green_iron_block
+purple_iron_block:
+  itemname: Iron Block
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1004
+    texture: chunkexplorer/block/purple_iron_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 5
+      model: purple_iron_block
+red_iron_block:
+  itemname: Iron Block
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1005
+    texture: chunkexplorer/block/red_iron_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 6
+      model: red_iron_block
+yellow_iron_block:
+  itemname: Iron Block
+  material: GOLD_INGOT
+  Pack:
+    parent_model: block/cube_all
+    custom_model_data: 1006
+    texture: chunkexplorer/block/yellow_iron_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 7
+      model: yellow_iron_block
