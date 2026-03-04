@@ -1,1 +1,0 @@
-../../blueprint-velocity.pkr.hcl

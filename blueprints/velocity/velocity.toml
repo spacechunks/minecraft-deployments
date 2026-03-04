@@ -7,13 +7,13 @@ bind = "0.0.0.0:25577"
 player-info-forwarding-mode = "modern"
 
 [servers]
-chunk-viewer = "chunk-viewer.minecraft.svc.cluster.local:25565"
+lobby = "lobby.minecraft.svc.cluster.local:25565"
 
 try = [
-    "chunk-viewer"
+    "lobby"
 ]
 
 [forced-hosts]
 "chunks.space" = [
-    "chunk-viewer"
+    "lobby"
 ]

@@ -1,0 +1,15 @@
+{
+  "name": "lobby",
+  "version": "2026.10.2",
+  "paper_version": "1.21.11-126",
+  "files": [
+    {
+      "source": "spc-mc/lobby/plugins/lobby.jar",
+      "destination": "/opt/paper/plugins/lobby.jar"
+    },
+    {
+      "source": "spc-mc/lobby/plugins/nexo-1.20-dev-1d9a9712.jar",
+      "destination": "/opt/paper/plugins/nexo-1.20-dev-1d9a9712.jar"
+    }
+  ]
+}
