@@ -1,0 +1,31 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "minecraft:chunkexplorer/font/logo.png",
+      "ascent": 24,
+      "height": 52,
+      "chars": [
+        "爱"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:chunkexplorer/font/bossbar.png",
+      "ascent": 0,
+      "height": 28,
+      "chars": [
+        "\uE101"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:chunkexplorer/font/hud.png",
+      "ascent": -19,
+      "height": 49,
+      "chars": [
+        "\uE102"
+      ]
+    }
+  ]
+}

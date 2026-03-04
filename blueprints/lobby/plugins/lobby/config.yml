@@ -1,0 +1,22 @@
+resourcePack:
+  fetchIntervalSeconds: 5
+  thumbnailsLocation: assets/spacechunks/textures/item/explorer/chunk_viewer/thumbnails
+  thumbnailMissingKey: spacechunks:explorer/chunk_viewer/thumbnails/missing
+  thumbnailKeyPrefix: spacechunks:explorer/chunk_viewer/thumbnails
+  s3:
+    accessKey: ORXFYOMDFNMLI4QZWQ9N
+    secretKey: rtGN09LGsfua9FKbnNSv0X8T8ZzI358o5cnaLc5b
+    bucket: explorer-data
+    region: nbg1
+    endpoint: https://nbg1.your-objectstorage.com
+    packObjectKey: explorer/latest.zip
+spawn:
+  world: blueprint-lobby
+  location:
+    x: 0.5
+    y: -42.0
+    z: 0.5
+chunkViewer:
+  controlPlane:
+    endpoint: api.explorer.stag.chunks.cloud:443
+    apiToken: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLmV4cGxvcmVyLnN0YWcuY2h1bmtzLmNsb3VkIl0sImVtYWlsIjoiamFuaXRvckBjaHVua3MuY2xvdWQiLCJleHAiOjQ5MjczMDMyNTgsImlhdCI6MTc3MTU0MzI1OCwiaXNzIjoiYXBpLmV4cGxvcmVyLnN0YWcuY2h1bmtzLmNsb3VkIiwidXNlcl9pZCI6IjAxOWM3ODJhLTNkODMtNzc2OS1iZjE3LTdlZjliY2FhYzAzYSJ9.eT1SHIhiiGCEkbXq1VIkuYbCl2CUESt1R4KxjS-Ef3H7SiDoFcAf5a-FxMqMKgSfu-BdX1qqmvyI62aeTfjD9Q
