@@ -1,3 +1,0 @@
-worlds:
-  world:
-    generator: chunk-viewer:void
