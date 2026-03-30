@@ -12,12 +12,12 @@ function build() {
     return
   fi
 
-  packer build -parallel-builds=1 -var-file=config.pkrvars.json .
+  packer build -parallel-builds=1 -var-file=config.pkrvars.json ../blueprint.pkr.hcl
 }
 
 docker login $BUILD_OCI_REG_SERVER -u $BUILD_OCI_REG_USER -p $BUILD_OCI_REG_PASS
 
-cd blueprints
+cd blueprints/paper
 
 for dir in */ ; do
   mode=$(basename $dir)
@@ -26,3 +26,16 @@ for dir in */ ; do
   build $mode
   cd ..
 done
+
+cd ../..
+cd blueprints/velocity
+
+for dir in */ ; do
+  mode=$(basename $dir)
+  echo "build $mode"
+  cd $mode
+  build $mode
+  cd ..
+done
+
+cd ../..
