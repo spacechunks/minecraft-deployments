@@ -63,11 +63,11 @@ build {
 
   // move symlinks before uploading files
   // because docker builder cant handle those
-  provisioner "shell-local" {
-    inline = [
-      "mv blueprint.pkr.hcl /tmp/blueprint.hcl"
-    ]
-  }
+//  provisioner "shell-local" {
+//    inline = [
+//      "mv blueprint.pkr.hcl /tmp/blueprint.hcl"
+//    ]
+//  }
 
   provisioner "file" {
     destination = "/opt/paper"
@@ -86,11 +86,11 @@ build {
   }
 
   // restore prevoius state
-  provisioner "shell-local" {
-    inline = [
-      "mv /tmp/blueprint.hcl blueprint.pkr.hcl"
-    ]
-  }
+  //provisioner "shell-local" {
+  //  inline = [
+  //    "mv /tmp/blueprint.hcl blueprint.pkr.hcl"
+  //  ]
+  //}
 
   provisioner "shell" {
     inline = [

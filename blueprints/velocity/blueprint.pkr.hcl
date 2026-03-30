@@ -61,14 +61,6 @@ build {
     "source.docker.amd64"
   ]
 
-  // move symlinks before uploading files
-  // because docker builder cant handle those
-  provisioner "shell-local" {
-    inline = [
-      "mv blueprint.pkr.hcl /tmp/blueprint.hcl"
-    ]
-  }
-
   provisioner "file" {
     destination = "/opt/velocity"
     source = "."
@@ -83,26 +75,6 @@ build {
         destination = provisioner.value.destination
       }
     }
-  }
-
-  // restore prevoius state
-  provisioner "shell-local" {
-    inline = [
-      "mv /tmp/blueprint.hcl blueprint.pkr.hcl"
-    ]
-  }
-
-  provisioner "shell" {
-    inline = [
-      "echo 'Starting .tgz extraction process'",
-      "find /opt/velocity -name '*.tgz' -print0 | while IFS= read -r -d '' file; do",
-      "  echo \"Extracting $file\"",
-      "  tar -xzvf \"$file\" -C /opt/velocity",
-      "  rm \"$file\"",
-      "  echo \"Extracted and removed $file\"",
-      "done",
-      "echo 'Extraction process completed'"
-    ]
   }
 
   post-processors {
