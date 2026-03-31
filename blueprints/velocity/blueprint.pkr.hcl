@@ -33,6 +33,10 @@ variable "files" {
   }))
 }
 
+variable "secrets" {
+  type = list(string)
+}
+
 variable "name" {
   type = string
 }
@@ -61,9 +65,31 @@ build {
     "source.docker.amd64"
   ]
 
+  dynamic "provisioner" {
+    for_each = var.secrets
+    labels = ["shell-local"]
+    content {
+      script = "../../../scripts/sops-decrypt.sh"
+      env = {
+        "ENCRYPTED_FILE": provisioner.value
+      }
+    }
+  }
+
   provisioner "file" {
     destination = "/opt/velocity"
     source = "."
+  }
+
+  dynamic "provisioner" {
+    for_each = var.secrets
+    labels = ["shell-local"]
+    content {
+      script = "../../../scripts/sops-encrypt.sh"
+      env = {
+        "ENCRYPTED_FILE": provisioner.value
+      }
+    }
   }
 
   dynamic "provisioner" {

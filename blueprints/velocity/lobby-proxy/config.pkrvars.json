@@ -15,5 +15,6 @@
       "source": "spc-mc/velocity/plugins/viaversion-5.7.1.jar",
       "destination": "/opt/velocity/plugins/viaversion-5.7.1.jar"
     }
-  ]
+  ],
+  "secrets": ["forwarding.secret.sops"]
 }

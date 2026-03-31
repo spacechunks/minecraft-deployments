@@ -33,6 +33,10 @@ variable "files" {
   }))
 }
 
+variable "secrets" {
+  type = list(string)
+}
+
 variable "name" {
   type = string
 }
@@ -61,17 +65,31 @@ build {
     "source.docker.amd64"
   ]
 
-  // move symlinks before uploading files
-  // because docker builder cant handle those
-//  provisioner "shell-local" {
-//    inline = [
-//      "mv blueprint.pkr.hcl /tmp/blueprint.hcl"
-//    ]
-//  }
+  dynamic "provisioner" {
+    for_each = var.secrets
+    labels = ["shell-local"]
+    content {
+      script = "../../../scripts/sops-decrypt.sh"
+      env = {
+        "ENCRYPTED_FILE": provisioner.value
+      }
+    }
+  }
 
   provisioner "file" {
     destination = "/opt/paper"
     source = "."
+  }
+
+  dynamic "provisioner" {
+    for_each = var.secrets
+    labels = ["shell-local"]
+    content {
+      script = "../../../scripts/sops-encrypt.sh"
+      env = {
+        "ENCRYPTED_FILE": provisioner.value
+      }
+    }
   }
 
   dynamic "provisioner" {

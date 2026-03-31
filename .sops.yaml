@@ -1,0 +1,9 @@
+keys:
+  # spc
+  - &yannic-macos-m2 age13eg8098xu9d40v6lc82mxslmcz3gwlcau5rmk37w74w3apn9kq6sugxhd2
+creation_rules:
+  # encrypted_regex helps encrypt the data and stringData fields for Secrets.
+  # kustomize does not work with `apiVersion` and `kind` fields being encrypted.
+  - key_groups:
+      - age:
+          - *yannic-macos-m2
