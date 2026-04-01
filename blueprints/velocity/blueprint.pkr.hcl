@@ -35,6 +35,7 @@ variable "files" {
 
 variable "secrets" {
   type = list(string)
+  default = []
 }
 
 variable "name" {
