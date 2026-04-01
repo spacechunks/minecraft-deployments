@@ -93,6 +93,13 @@ build {
     }
   }
 
+  // fixes
+  //    Failed to pipe upload: write |1: broken pipe somehow
+  // when trying to upload s3 files
+  provisioner "shell-local" {
+    inline = ["sleep 1"]
+  }
+
   dynamic "provisioner" {
     for_each = var.files
     labels = ["s3"]
