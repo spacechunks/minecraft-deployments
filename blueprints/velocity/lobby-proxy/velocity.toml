@@ -17,3 +17,8 @@ try = [
 "chunks.space" = [
     "lobby"
 ]
+
+[advanced]
+announce-proxy-commands = false
+log-player-connections = false
+accepts-transfers = true
