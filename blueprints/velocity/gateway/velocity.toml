@@ -46,5 +46,5 @@ enable-player-address-logging = false
 
 [advanced]
 announce-proxy-commands = false
-log-player-connections = true
+log-player-connections = false
 accepts-transfers = true
