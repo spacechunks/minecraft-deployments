@@ -45,6 +45,6 @@ ping-passthrough = "DISABLED"
 enable-player-address-logging = false
 
 [advanced]
-announce-proxy-commands = false
+announce-proxy-commands = true
 log-player-connections = false
 accepts-transfers = true
