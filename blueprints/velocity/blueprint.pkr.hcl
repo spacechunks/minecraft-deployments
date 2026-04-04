@@ -97,7 +97,7 @@ build {
   //    Failed to pipe upload: write |1: broken pipe somehow
   // when trying to upload s3 files
   provisioner "shell-local" {
-    inline = ["sleep 1"]
+    inline = ["sleep 5"]
   }
 
   dynamic "provisioner" {
