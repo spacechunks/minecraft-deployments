@@ -1,6 +1,6 @@
 {
   "name": "gateway",
-  "version": "2026.14.16",
+  "version": "2026.18.1",
   "velocity_version": "3.5.0-SNAPSHOT-584",
   "files": [
     {
@@ -8,8 +8,8 @@
       "destination": "/opt/velocity/plugins/gateway-0.1.0.jar"
     },
     {
-      "source": "spc-mc/velocity/plugins/viaversion-5.7.1.jar",
-      "destination": "/opt/velocity/plugins/viaversion-5.7.1.jar"
+      "source": "spc-mc/velocity/plugins/viaversion-5.9.0.jar",
+      "destination": "/opt/velocity/plugins/viaversion-5.9.0.jar"
     }
   ],
   "secrets": ["forwarding.secret.sops"]
