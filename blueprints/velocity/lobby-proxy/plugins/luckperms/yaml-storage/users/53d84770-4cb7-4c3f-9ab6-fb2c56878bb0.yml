@@ -1,0 +1,7 @@
+uuid: 53d84770-4cb7-4c3f-9ab6-fb2c56878bb0
+name: EgyBoy
+primary-group: default
+permissions:
+  - "*"
+parents:
+  - default
