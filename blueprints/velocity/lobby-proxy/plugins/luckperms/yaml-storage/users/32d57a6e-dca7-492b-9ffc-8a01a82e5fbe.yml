@@ -1,0 +1,7 @@
+uuid: 32d57a6e-dca7-492b-9ffc-8a01a82e5fbe
+name: domme0hd
+primary-group: default
+permissions:
+  - "*"
+parents:
+  - default

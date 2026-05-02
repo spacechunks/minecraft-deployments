@@ -1,0 +1,7 @@
+uuid: 0fba37fa-1564-4c13-9b8a-d32a128f8fe0
+name: Fllip
+primary-group: default
+permissions:
+- '*'
+parents:
+- default
