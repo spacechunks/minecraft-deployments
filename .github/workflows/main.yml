@@ -64,3 +64,4 @@ jobs:
               '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
               "$file"
           done
+      - run: "cd infra && git diff"
