@@ -7,23 +7,9 @@ motd = "explorer gateway proxy"
 show-max-players = 69
 online-mode = true
 
-# Should we forward IP addresses and other data to backend servers?
-# Available options:
-# - "none":        No forwarding will be done. All players will appear to be connecting
-#                  from the proxy and will have offline-mode UUIDs.
-# - "legacy":      Forward player IPs and UUIDs in a BungeeCord-compatible format. Use this
-#                  if you run servers using Minecraft 1.12 or lower.
-# - "bungeeguard": Forward player IPs and UUIDs in a format supported by the BungeeGuard
-#                  plugin. Use this if you run servers using Minecraft 1.12 or lower, and are
-#                  unable to implement network level firewalling (on a shared host).
-# - "modern":      Forward player IPs and UUIDs as part of the login process using
-#                  Velocity's native forwarding. Only applicable for Minecraft 1.13 or higher.
-player-info-forwarding-mode = "modern"
-
-# If you are using modern or BungeeGuard IP forwarding, configure a file that contains a unique secret here.
-# The file is expected to be UTF-8 encoded and not empty.
-forwarding-secret-file = "forwarding.secret"
-
+# we use bungeecord forwarding here, because chunks using version 1.8
+# cannot work with modern forwarding.
+player-info-forwarding-mode = "legacy"
 
 # Should Velocity pass server list ping requests to a backend server?
 # Available options:
