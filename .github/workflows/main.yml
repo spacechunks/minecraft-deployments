@@ -29,8 +29,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          repository: spacechunks/infra
-          path: main
+          repository: git@github.com:spacechunks/infra.git
+          ref: main
+          path: infra
       - name: install tools
         run: |
           sudo add-apt-repository ppa:rmescandon/yq
