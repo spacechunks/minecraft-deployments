@@ -1,0 +1,91 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
+      BUILD_OCI_REG_PASS: ${{ secrets.GH_TOKEN }}
+      BUILD_OCI_REG_SERVER: ghcr.io
+      AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
+      AWS_ENDPOINT_URL: https://nbg1.your-objectstorage.com
+      AWS_REGION: nbg1
+      SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: hashicorp-contrib/setup-packer@v3
+      - name: packet init
+        run: |
+          cd blueprints/paper && packer init . && cd -
+          cd blueprints/velocity && packer init . && cd -
+      - name: install sops
+        run: |
+          SOPS_VERSION=v3.12.2
+          SOPS_ARCH=amd64
+          curl -LO https://github.com/getsops/sops/releases/download/$SOPS_VERSION/sops-$SOPS_VERSION.linux.$SOPS_ARCH
+          mv sops-$SOPS_VERSION.linux.$SOPS_ARCH /usr/local/bin/sops
+          chmod +x /usr/local/bin/sops
+      - run: ./scripts/build.sh
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: checkout blueprints
+        uses: actions/checkout@v6
+        with:
+          path: minecraft-blueprints
+      - name: checkout infra
+        uses: actions/checkout@v6
+        with:
+          repository: spacechunks/infra
+          token: ${{ secrets.GH_TOKEN }}
+          path: infra
+      - name: install tools
+        run: |
+          sudo apt update
+          sudo apt install -y jq yq
+      - name: adjust paper deployments
+        run: |
+          cd minecraft-blueprints
+          for p in $(find . -type f -name "config.pkrvars.json") ; do
+            # the deployment and platform is based on the last two
+            # parent dirswhere the config.pkrvars.json lives. for a
+            # config at blueprints/paper/lobby/config.pkrvars.json
+            # it would be deployment_name=lobby and platform=paper.
+            deployment_name=$(basename $(dirname $p))
+
+            platform=$(basename $(dirname $(dirname $p)))
+            version=$(cat $p | jq -r '.version')
+            image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
+            file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
+
+            echo "updating $deployment_name ($platform) to $image"
+            yq -iy \
+              --arg img "$image" \
+              '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
+              "$file"
+          done
+      - name: push updates
+        run: |
+          cd infra
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes detected. exiting."
+            exit 0
+          fi
+
+          git diff
+          git config --local user.email "tobor@chunks.cloud"
+          git config --local user.name "tobor"
+          git commit -a -m "app1-euc-prod: update minecraft deployments"
+          git push
