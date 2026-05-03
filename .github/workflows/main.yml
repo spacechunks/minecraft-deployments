@@ -64,4 +64,11 @@ jobs:
               '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
               "$file"
           done
-      - run: "cd infra && git diff"
+      - name: push updates
+        run: |
+          cd infra
+          git diff
+          git config --local user.email "tobor@chunks.cloud"
+          git config --local user.name "tobor"
+          git commit -a -m "update minecraft deployments"
+          git push
