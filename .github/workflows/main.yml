@@ -36,7 +36,6 @@ jobs:
       - name: install tools
         run: |
           sudo apt update
-          sudo add-apt-repository ppa:rmescandon/yq
           sudo apt install -y jq yq
       - name: debug
         run: ls -la
