@@ -29,7 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          repository: git@github.com:spacechunks/infra.git
+          repository: spacechunks/infra
+          token: ${{ secrets.GH_TOKEN }}
           ref: main
           path: infra
       - name: install tools
