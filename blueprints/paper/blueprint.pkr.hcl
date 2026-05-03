@@ -46,12 +46,15 @@ variable "version" {
   type = string
 }
 
-source "docker" "arm64" {
-  image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
-  commit = "true"
-  platform = "linux/arm64"
-  run_command = ["-d", "-i", "-t", "{{.Image}}"]
-}
+// disable arm64 builds temporarily (tm) unitl we
+// figured out why it doesn't work in the ci
+//
+//source "docker" "arm64" {
+//  image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
+//  commit = "true"
+//  platform = "linux/arm64"
+//  run_command = ["-d", "-i", "-t", "{{.Image}}"]
+//}
 
 source "docker" "amd64" {
   image = "ghcr.io/spacechunks/paper-docker:${var.paper_version}"
@@ -62,7 +65,7 @@ source "docker" "amd64" {
 
 build {
   sources = [
-    "source.docker.arm64",
+   // "source.docker.arm64",
     "source.docker.amd64"
   ]
 
