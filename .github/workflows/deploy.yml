@@ -1,6 +1,8 @@
+name: deploy
 on:
-  pull_request: {}
-
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -85,5 +87,5 @@ jobs:
           git diff
           git config --local user.email "tobor@chunks.cloud"
           git config --local user.name "tobor"
-          git commit -a -m "update minecraft deployments"
+          git commit -a -m "app1-euc-prod: update minecraft deployments"
           git push
