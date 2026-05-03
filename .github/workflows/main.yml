@@ -27,11 +27,13 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v6
+      - name: checkout blueprints
+        uses: actions/checkout@v6
+      - name: checkout infra
+        uses: actions/checkout@v6
         with:
           repository: spacechunks/infra
           token: ${{ secrets.GH_TOKEN }}
-          ref: main
           path: infra
       - name: install tools
         run: |
@@ -41,6 +43,7 @@ jobs:
         run: ls -la
       - name: adjust paper deployments
         run: |
+          cd minecraft-blueprints
           for p in $(find . -type f -name "config.pkrvars.json") ; do
             # the deployment and platform is based on the last two
             # parent dirswhere the config.pkrvars.json lives. for a
@@ -51,7 +54,7 @@ jobs:
             platform=$(basename $(dirname $(dirname $p)))
             version=$(cat $p | jq -r '.version')
             image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
-            file="infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
+            file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
 
             echo "updating $deployment_name ($platform) to $image"
             yq -iy \
