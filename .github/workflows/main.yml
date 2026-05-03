@@ -1,25 +1,59 @@
 on:
-  push:
-    tags:
-      - '*'
+  pull_request: {}
 
 jobs:
-  build:
+  #  build:
+  #    runs-on: ubuntu-latest
+  #    permissions:
+  #      contents: read
+  #      packages: write
+  #    env:
+  #      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
+  #      BUILD_OCI_REG_PASS: ${{ secrets.GITHUB_TOKEN }}
+  #      BUILD_OCI_REG_SERVER: ghcr.io
+  #      BUILD_S3_ACCESS_KEY: ${{ secrets.S3_ACCESS_KEY }}
+  #      BUILD_S3_SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
+  #      BUILD_S3_ENDPOINT: ams1.vultrobjects.com
+  #    steps:
+  #      - uses: actions/checkout@v2
+  #      - uses: hashicorp-contrib/setup-packer@v1
+  #      - name: Init Packer
+  #        run: packer init .
+  #      - name: Run build script
+  #        run: ./scripts/build.sh
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-    env:
-      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
-      BUILD_OCI_REG_PASS: ${{ secrets.GITHUB_TOKEN }}
-      BUILD_OCI_REG_SERVER: ghcr.io
-      BUILD_S3_ACCESS_KEY: ${{ secrets.S3_ACCESS_KEY }}
-      BUILD_S3_SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
-      BUILD_S3_ENDPOINT: ams1.vultrobjects.com
     steps:
-      - uses: actions/checkout@v2
-      - uses: hashicorp-contrib/setup-packer@v1
-      - name: Init Packer
-        run: packer init .
-      - name: Run build script
-        run: ./scripts/build.sh
+      - uses: actions/checkout@v6
+        with:
+          repository: spacechunks/infra
+      - name: install tools
+        run: |
+          sudo add-apt-repository ppa:rmescandon/yq
+          sudo apt update
+          sudo apt install -y jq yq
+      - name: debug
+        run: ls -la
+      - name: adjust paper deployments
+        run: |
+          for p in $(find . -type f -name "config.pkrvars.json") ; do
+            # the deployment and platform is based on the last two
+            # parent dirswhere the config.pkrvars.json lives. for a
+            # config at blueprints/paper/lobby/config.pkrvars.json
+            # it would be deployment_name=lobby and platform=paper.
+            deployment_name=$(basename $(dirname $p))
+
+            platform=$(basename $(dirname $(dirname $p)))
+            version=$(cat $p | jq -r '.version')
+            image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
+            file="infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
+
+            echo "updating $deployment_name ($platform) to $image"
+            yq -iy \
+              --arg img "$image" \
+              '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
+              "$file"
+          done
