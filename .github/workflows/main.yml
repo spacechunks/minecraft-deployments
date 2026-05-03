@@ -29,6 +29,8 @@ jobs:
     steps:
       - name: checkout blueprints
         uses: actions/checkout@v6
+        with:
+          path: minecraft-blueprints
       - name: checkout infra
         uses: actions/checkout@v6
         with:
