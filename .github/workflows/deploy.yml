@@ -2,25 +2,25 @@ on:
   pull_request: {}
 
 jobs:
-  #  build:
-  #    runs-on: ubuntu-latest
-  #    permissions:
-  #      contents: read
-  #      packages: write
-  #    env:
-  #      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
-  #      BUILD_OCI_REG_PASS: ${{ secrets.GITHUB_TOKEN }}
-  #      BUILD_OCI_REG_SERVER: ghcr.io
-  #      BUILD_S3_ACCESS_KEY: ${{ secrets.S3_ACCESS_KEY }}
-  #      BUILD_S3_SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
-  #      BUILD_S3_ENDPOINT: ams1.vultrobjects.com
-  #    steps:
-  #      - uses: actions/checkout@v2
-  #      - uses: hashicorp-contrib/setup-packer@v1
-  #      - name: Init Packer
-  #        run: packer init .
-  #      - name: Run build script
-  #        run: ./scripts/build.sh
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
+      BUILD_OCI_REG_PASS: ${{ secrets.GH_TOKEN }}
+      BUILD_OCI_REG_SERVER: ghcr.io
+      AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
+      AWS_ENDPOINT_URL: https://nbg1.your-objectstorage.com
+      AWS_REGION: nbg1
+      SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: hashicorp-contrib/setup-packer@v3
+      - run: packer init .
+      - run: ./scripts/build.sh
   deploy:
     runs-on: ubuntu-latest
     permissions:
@@ -41,8 +41,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y jq yq
-      - name: debug
-        run: ls -la
       - name: adjust paper deployments
         run: |
           cd minecraft-blueprints
@@ -67,6 +65,12 @@ jobs:
       - name: push updates
         run: |
           cd infra
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes detected. exiting."
+            exit 0
+          fi
+
           git diff
           git config --local user.email "tobor@chunks.cloud"
           git config --local user.name "tobor"
