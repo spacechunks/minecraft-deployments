@@ -19,9 +19,12 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: hashicorp-contrib/setup-packer@v3
-      - run: packer init .
+      - run: |
+          cd blueprints/paper && packer init .
+          cd blueprints/velocity && packer init .
       - run: ./scripts/build.sh
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
