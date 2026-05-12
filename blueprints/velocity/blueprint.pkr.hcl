@@ -46,12 +46,12 @@ variable "version" {
   type = string
 }
 
-source "docker" "arm64" {
-  image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
-  commit = "true"
-  platform = "linux/arm64"
-  run_command = ["-d", "-i", "-t", "{{.Image}}"]
-}
+//source "docker" "arm64" {
+//  image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
+//  commit = "true"
+//  platform = "linux/arm64"
+//  run_command = ["-d", "-i", "-t", "{{.Image}}"]
+//}
 
 source "docker" "amd64" {
   image = "ghcr.io/spacechunks/velocity-docker:${var.velocity_version}"
