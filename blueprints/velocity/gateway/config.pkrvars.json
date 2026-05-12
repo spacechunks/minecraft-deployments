@@ -1,6 +1,6 @@
 {
   "name": "gateway",
-  "version": "2026.20.2",
+  "version": "2026.20.3",
   "velocity_version": "3.5.0-SNAPSHOT-584",
   "files": [
     {
