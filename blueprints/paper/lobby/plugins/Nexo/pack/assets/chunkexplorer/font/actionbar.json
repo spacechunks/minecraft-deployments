@@ -1,0 +1,68 @@
+{
+  "providers": [
+    {
+      "type": "bitmap", "height": 13, "ascent": -21,
+      "file": "chunkexplorer:font/actionbar/hearts.png",
+      "chars": [
+        "\uE100",
+        "\uE101",
+        "\uE102",
+        "\uE103",
+        "\uE104",
+        "\uE105",
+        "\uE106",
+        "\uE107",
+        "\uE108",
+        "\uE109",
+        "\uE10A",
+        "\uE10B",
+        "\uE10C",
+        "\uE10D",
+        "\uE10E",
+        "\uE10F",
+        "\uE110",
+        "\uE111",
+        "\uE112",
+        "\uE113",
+        "\uE114"
+      ]
+    },
+    {
+      "type": "bitmap", "height": 13, "ascent": -21,
+      "file": "chunkexplorer:font/actionbar/gravity.png",
+      "chars": [
+        "\uE120",
+        "\uE121",
+        "\uE122",
+        "\uE123",
+        "\uE124",
+        "\uE125",
+        "\uE126",
+        "\uE127",
+        "\uE128",
+        "\uE129",
+        "\uE12A",
+        "\uE12B",
+        "\uE12C",
+        "\uE12D",
+        "\uE12E",
+        "\uE12F",
+        "\uE130",
+        "\uE131",
+        "\uE132",
+        "\uE133",
+        "\uE134"
+      ]
+    },
+    {
+      "type": "bitmap", "height": 9, "ascent": -56,
+      "file": "chunkexplorer:font/actionbar/chat.png",
+      "chars": [ "\uE140", "\uE141" ]
+    },
+    {
+      "type": "bitmap", "height": 9, "ascent": -44,
+      "file": "chunkexplorer:font/actionbar/voicechat.png",
+      "chars": [ "\uE150" ]
+    }
+  ]
+}

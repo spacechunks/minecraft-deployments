@@ -5,10 +5,14 @@
 
   "connect.joining": "Trying to find Connection in Space",
   "multiplayer.downloadingTerrain":"Downloading Chunks from Space",
-  "menu.game": "爱",
-  "menu.returnToGame": "Back to Exploring Chunks",
-  "menu.disconnect": "Return to Earth",
+  "menu.game": "\uE102",
+  "menu.returnToGame": "§eBack to Exploring Chunks",
+  "menu.returnToMenu": "\uEF01\uE103",
+  "menu.disconnect": "\uEF01\uE103",
+  "menu.shareToLan": "chunks.space",
+  "menu.advancements": "How to Play?",
   "container.inventory": "",
   "container.crafting": "",
-  "menu.shareToLan": "chunks.space"
+  "gui.advancements": "How to Play?",
+  "advancements.story.root.title": "\uEF00§f\uE101"
 }

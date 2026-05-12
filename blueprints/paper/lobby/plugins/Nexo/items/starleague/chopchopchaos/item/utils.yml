@@ -1,0 +1,19 @@
+# Beispiel-Datei: plugins/Nexo/items/my_furniture.yml
+
+electric_kebab_slicer:
+  itemname: Electric Kebab Slicer
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/item/util/electric_kebab_slicer
+
+spoon:
+  itemname: Spoon
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/item/util/spoon
+
+tongs:
+  itemname: Tongs
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/item/util/tongs

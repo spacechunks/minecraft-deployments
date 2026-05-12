@@ -1,0 +1,41 @@
+{
+  "providers": [
+    {
+      "type": "reference",
+      "id": "spacechunks-visualkit:font/space"
+    },
+    {
+      "type": "bitmap",
+      "file": "spacechunks-visualkit:font/assets/charset/minecraft-small.png",
+      "ascent": 7,
+      "height": 7,
+      "chars": [
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "spacechunks-visualkit:font/text/minecraft-small-background.png",
+      "ascent": 7,
+      "height": 7,
+      "chars": [
+        "\uE200",
+        "\uE201",
+        "\uE202",
+        "\uE203",
+        "\uE204",
+        "\uE205",
+        "\uE206",
+        "\uE207",
+        "\uE208",
+        "\uE209",
+        "\uE20A",
+        "\uE20B",
+        "\uE20C",
+        "\uE20D",
+        "\uE20E",
+        "\uE20F"
+      ]
+    }
+  ]
+}

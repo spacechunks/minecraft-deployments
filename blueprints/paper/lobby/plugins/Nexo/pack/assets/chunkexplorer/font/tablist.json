@@ -1,0 +1,9 @@
+{
+  "providers": [
+    {
+      "type": "bitmap", "height": 46, "ascent": 0,
+      "file": "chunkexplorer:font/assets/logo/chunkexplorer/text.png",
+      "chars": [ "\uE100" ]
+    }
+  ]
+}

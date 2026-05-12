@@ -1,0 +1,20 @@
+example:
+  itemname: Example
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:block/alloy/example_north.png
+      south: spacechunks-extended:block/alloy/example_south.png
+      east: spacechunks-extended:block/alloy/example_east.png
+      west: spacechunks-extended:block/alloy/example_west.png
+      up: spacechunks-extended:block/alloy/example_up.png
+      down: spacechunks-extended:block/alloy/example_down.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 7
+  templates:
+  - t_block_sound_metal

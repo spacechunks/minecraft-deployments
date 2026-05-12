@@ -1,0 +1,12 @@
+checkerboard_tiles:
+  itemname: Checkerboard Tiles
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    texture: starleague:chopchopchaos/block/checkerboard_tiles.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 2
+      model: checkerboard_tiles
+

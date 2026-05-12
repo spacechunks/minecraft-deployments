@@ -1,0 +1,23 @@
+{
+  "providers": [
+    {
+      "type": "bitmap", "height": 11, "ascent": 11,
+      "file": "chunkexplorer:font/title/loading-spinner.png",
+      "chars": [
+        "\uE100",
+        "\uE101",
+        "\uE102",
+        "\uE103",
+        "\uE104",
+        "\uE105",
+        "\uE106",
+        "\uE107"
+      ]
+    },
+    {
+      "type": "bitmap", "height": 4000, "ascent": 2000,
+      "file": "chunkexplorer:font/title/square.png",
+      "chars": [ "\uE200" ]
+    }
+  ]
+}

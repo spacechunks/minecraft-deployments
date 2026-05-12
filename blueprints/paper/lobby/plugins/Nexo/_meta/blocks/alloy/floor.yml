@@ -1,0 +1,75 @@
+steel_block:
+  itemname: Steel Block
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/alloy/floor/steel_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 14
+  templates:
+  - t_block_sound_metal
+
+steel_tile_corner:
+  itemname: Steel Tile Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:block/alloy/floor/steel_tile_corner_north.png
+      south: spacechunks-extended:block/alloy/floor/steel_tile_corner_south.png
+      east: spacechunks-extended:block/alloy/floor/steel_tile_corner_east.png
+      west: spacechunks-extended:block/alloy/floor/steel_tile_corner_west.png
+      up: spacechunks-extended:block/alloy/floor/steel_tile_corner_up.png
+      down: spacechunks-extended:block/alloy/floor/steel_tile_corner_down.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 15
+  templates:
+  - t_block_sound_metal
+
+steek_tile_edge:
+  itemname: Steel Tile Edge
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:block/nan.png
+      south: spacechunks-extended:block/nan.png
+      east: spacechunks-extended:block/nan.png
+      west: spacechunks-extended:block/nan.png
+      up: spacechunks-extended:block/alloy/floor/steel_tile_edge_up.png
+      down: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 22
+  templates:
+  - t_block_sound_metal
+
+steek_tile_edge_corner:
+  itemname: Steel Tile Edge Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:block/nan.png
+      south: spacechunks-extended:block/nan.png
+      east: spacechunks-extended:block/nan.png
+      west: spacechunks-extended:block/nan.png
+      up: spacechunks-extended:block/alloy/floor/steel_tile_edge_corner_up.png
+      down: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 29
+  templates:
+  - t_block_sound_metal

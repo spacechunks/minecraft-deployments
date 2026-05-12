@@ -1,0 +1,61 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "spacechunks-visualkit:font/assets/background/translucent_15.png",
+      "ascent": 4,
+      "height": 15,
+      "chars": [
+        "\uE110",
+        "\uE111",
+        "\uE112",
+        "\uE113",
+        "\uE114",
+        "\uE115",
+        "\uE116",
+        "\uE117"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "spacechunks-visualkit:font/assets/background/translucent_28.png",
+      "ascent": 5,
+      "height": 28,
+      "chars": [
+        "\uE120",
+        "\uE121",
+        "\uE122",
+        "\uE123",
+        "\uE124",
+        "\uE125",
+        "\uE126",
+        "\uE127"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "spacechunks-visualkit:font/assets/background/translucent_16.png",
+      "ascent": 5,
+      "height": 16,
+      "chars": [
+        "\uE130",
+        "\uE131",
+        "\uE132",
+        "\uE133",
+        "\uE134",
+        "\uE135",
+        "\uE136",
+        "\uE137"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "spacechunks-visualkit:font/bossbar/loading.png",
+      "ascent": 1,
+      "height": 20,
+      "chars": [
+        "\uE301"
+      ]
+    }
+  ]
+}

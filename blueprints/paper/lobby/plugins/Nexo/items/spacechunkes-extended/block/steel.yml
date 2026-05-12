@@ -1,0 +1,207 @@
+steel_block:
+  itemname: Steel Block
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/steel_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 3
+  templates:
+  - t_block_sound_metal
+
+steel_plate:
+  itemname: Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 4
+  templates:
+  - t_block_sound_metal
+
+steel_plate_corner:
+  itemname: Steel Plate Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:block/steel/steel_plate.png
+      south: spacechunks-extended:block/steel/steel_plate.png
+      east: spacechunks-extended:block/steel/steel_plate.png
+      west: spacechunks-extended:block/steel/steel_plate.png
+      up: spacechunks-extended:block/steel/steel_plate_corner.png
+      down: spacechunks-extended:block/steel/steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 5
+  templates:
+  - t_block_sound_metal
+
+steel_plate_edge:
+  itemname: Steel Plate Edge
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:block/steel/steel_plate.png
+      south: spacechunks-extended:block/steel/steel_plate.png
+      east: spacechunks-extended:block/steel/steel_plate.png
+      west: spacechunks-extended:block/steel/steel_plate.png
+      up: spacechunks-extended:block/steel/steel_plate_edge.png
+      down: spacechunks-extended:block/steel/steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 12
+  templates:
+  - t_block_sound_metal
+
+steel_grid:
+  itemname: Steel Grid
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/steel_grid.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 19
+      directional:
+        type: DROPPER
+  templates:
+  - t_block_sound_metal
+
+steel_panel:
+  itemname: Steel Panel
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/steel_panel.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 26
+  templates:
+  - t_block_sound_metal
+
+white_checkered_steel_plate:
+  itemname: White Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/white_checkered_steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 33
+  templates:
+  - t_block_sound_metal
+
+purple_checkered_steel_plate:
+  itemname: Purple Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/purple_checkered_steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 34
+  templates:
+  - t_block_sound_metal
+
+yellow_checkered_steel_plate:
+  itemname: Yellow Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/yellow_checkered_steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 35
+  templates:
+  - t_block_sound_metal
+
+blue_checkered_steel_plate:
+  itemname: Blue Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/blue_checkered_steel_plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 36
+  templates:
+  - t_block_sound_metal
+
+checkered_block:
+  itemname: Checkered Block
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/checkered_block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 37
+  templates:
+  - t_block_sound_metal
+
+checkered_steel_plate_corner:
+  itemname: Checkered Steel Plate Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/checkered_steel_plate_corner.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 38
+  templates:
+  - t_block_sound_metal
+
+checkered_steel_plate_inner_corner:
+  itemname: Checkered Steel Plate Inner Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/checkered_steel_plate_inner_corner.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 45
+  templates:
+  - t_block_sound_metal
+
+checkered_steel_plate_edge:
+  itemname: Checkered Steel Plate Edge
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:block/steel/checkered_steel_plate_edge.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+      custom_variation: 52
+  templates:
+  - t_block_sound_metal
