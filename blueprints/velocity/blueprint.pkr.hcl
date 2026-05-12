@@ -62,7 +62,7 @@ source "docker" "amd64" {
 
 build {
   sources = [
-    "source.docker.arm64",
+    //"source.docker.arm64",
     "source.docker.amd64"
   ]
 
