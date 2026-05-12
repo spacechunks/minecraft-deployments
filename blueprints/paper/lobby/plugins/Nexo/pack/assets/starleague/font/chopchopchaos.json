@@ -1,0 +1,49 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        "\uF821": 1,
+        "\uF822": 2,
+        "\uF824": 4,
+        "\uF828": 8,
+        "\uF829": 16,
+        "\uF82A": 32,
+        "\uF82B": 64,
+        "\uF82C": 128,
+        "\uF82D": 256,
+        "\uF82E": 512,
+        "\uF82F": 1024,
+        "\uF801": -1,
+        "\uF802": -2,
+        "\uF804": -4,
+        "\uF808": -8,
+        "\uF809": -16,
+        "\uF80A": -32,
+        "\uF80B": -64,
+        "\uF80C": -128,
+        "\uF80D": -256,
+        "\uF80E": -512,
+        "\uF80F": -1024
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "starleague:chopchopchaos/font/bar_modular.png",
+      "ascent": -7,
+      "height": 12,
+      "chars": [
+        "\uE500\uE501\uE502\uE503\uE504\uE505\uE506\uE507\uE508\uE509\uE50A\uE50B\uE50C\uE50D\uE50E\uE50F"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "starleague:chopchopchaos/font/bossbar.png",
+      "ascent": 8,
+      "height": 24,
+      "chars": [
+        "\uE600"
+      ]
+    }
+  ]
+}

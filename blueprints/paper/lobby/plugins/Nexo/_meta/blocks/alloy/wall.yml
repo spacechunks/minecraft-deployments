@@ -1,0 +1,101 @@
+blue_1:
+  itemname: Blue 1
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/wall/blue_1.png
+      end: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+      custom_variation: 36
+  templates:
+  - t_block_sound_metal
+
+blue_2:
+  itemname: Blue 2
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/wall/blue_2.png
+      end: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+      custom_variation: 40
+  templates:
+  - t_block_sound_metal
+
+blue_3:
+  itemname: Blue 3
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/wall/blue_3.png
+      end: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+      custom_variation: 44
+  templates:
+  - t_block_sound_metal
+
+gray_1:
+  itemname: Gray 1
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/wall/gray_1.png
+      end: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+      custom_variation: 48
+  templates:
+  - t_block_sound_metal
+
+gray_2:
+  itemname: Gray 2
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/wall/gray_2.png
+      end: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+      custom_variation: 52
+  templates:
+  - t_block_sound_metal
+
+gray_3:
+  itemname: Gray 3
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/wall/gray_3.png
+      end: spacechunks-extended:block/nan.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+      custom_variation: 56
+  templates:
+  - t_block_sound_metal

@@ -1,0 +1,19 @@
+{
+  "providers": [
+    {
+      "type": "bitmap", "height": 4, "ascent": -6,
+      "file": "chunkexplorer:font/bossbar/party/status.png",
+      "chars": [ "\uE110","\uE111","\uE112" ]
+    },
+    {
+      "type": "bitmap", "height": 10, "ascent": 1,
+      "file": "chunkexplorer:font/bossbar/party/frame.png",
+      "chars": [ "\uE120" ]
+    },
+    {
+      "type": "bitmap", "height": 8, "ascent": 0,
+      "file": "chunkexplorer:font/bossbar/party/slot.png",
+      "chars": [ "\uE130" ]
+    }
+  ]
+}

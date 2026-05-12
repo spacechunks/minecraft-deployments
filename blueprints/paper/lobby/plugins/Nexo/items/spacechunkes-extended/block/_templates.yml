@@ -1,0 +1,10 @@
+t_block_sound_metal:
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+        hit_sound: block.iron_door.close
+        step_sound: block.chain.step
+        fall_sound: block.anvil.fall

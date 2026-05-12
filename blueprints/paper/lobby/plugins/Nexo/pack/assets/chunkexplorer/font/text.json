@@ -1,0 +1,24 @@
+{
+  "providers": [
+    {
+      "type": "bitmap", "height": 9, "ascent": 9,
+      "file": "chunkexplorer:font/text/prefix-extender.png",
+      "chars": [ "\uE100" ]
+    },
+    {
+      "type": "bitmap", "height": 9, "ascent": 9,
+      "file": "chunkexplorer:font/text/prefix.png",
+      "chars": [ "\uE101", "\uE102" ]
+    },
+    {
+      "type": "bitmap", "height": 9, "ascent": 9,
+      "file": "chunkexplorer:font/text/button.png",
+      "chars": [ "\uE130", "\uE131" ]
+    },
+    {
+      "type": "bitmap", "height": 8, "ascent": 7,
+      "file": "chunkexplorer:font/text/icon/player-rank.png",
+      "chars": [ "\uE200" ]
+    }
+  ]
+}

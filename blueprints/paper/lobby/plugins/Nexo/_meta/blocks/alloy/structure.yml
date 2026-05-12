@@ -1,0 +1,19 @@
+titanium_beam:
+  itemname: Titanium Beam
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_column
+    textures:
+      side: spacechunks-extended:block/alloy/structure/titanium_beam_side.png
+      end: spacechunks-extended:block/alloy/structure/titanium_beam_end.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+        x_variation: 3
+        y_variation: 4
+        z_variation: 5
+      custom_variation: 1
+  templates:
+  - t_block_sound_metal

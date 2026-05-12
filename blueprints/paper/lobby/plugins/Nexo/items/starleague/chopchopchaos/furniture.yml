@@ -1,0 +1,324 @@
+# Beispiel-Datei: plugins/Nexo/items/my_furniture.yml
+
+kitchen_counter:
+  itemname: <white>Kitchen Counter
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/counter
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+salad_bar:
+  itemname: <white>Salad Bar
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/counter_salad
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+sauce_bar:
+  itemname: <white>Sauce Bar
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/counter_sauce
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+extras_bar:
+  itemname: <white>Extras Bar
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/counter_extras
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+assembler_board:
+  itemname: <white>Cutting Board
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/cutting_board
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+beverage_refrigerator:
+  itemname: <white>Beverage Refrigerator
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/beverage_refrigerator
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+        scale: 0.95,0.95,0.95
+
+deep_fryer:
+  itemname: <white>Deep Fryer
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/deep_fryer_empty
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+deep_fryer_burnt:
+  itemname: <gray>Deep Fryer (Burnt)
+  excludeFromInventory: true
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/deep_fryer_burned
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+deep_fryer_frying:
+  itemname: <gray>Deep Fryer (Frying)
+  excludeFromInventory: true
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/deep_fryer_frying
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+deep_fryer_finished:
+  itemname: <gray>Deep Fryer (Finished)
+  excludeFromInventory: true
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: starleague:chopchopchaos/furniture/deep_fryer_finished
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE
+
+toaster:
+  itemname: <white>Toaster
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/toaster_empty
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      properties:
+        display_transform: NONE
+
+toaster_burnt:
+  itemname: <gray>Toaster (Burnt)
+  excludeFromInventory: true
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/toaster_burned
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      properties:
+        display_transform: NONE
+
+toaster_toasting:
+  itemname: <gray>Toaster (Toasting)
+  excludeFromInventory: true
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/toaster_toasting
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      properties:
+        display_transform: NONE
+
+toaster_finished:
+  itemname: <gray>Toaster (Finished)
+  excludeFromInventory: true
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/toaster_finished
+  Mechanics:
+    furniture:
+      hitbox:
+        barriers:
+        - 0,0,0
+      properties:
+        display_transform: NONE
+
+garbage_can:
+  itemname: <white>Garbage Can
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/garbage_can
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      properties:
+        display_transform: NONE
+
+fridge:
+  itemname: <white>Fridge
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/fridge
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      barriers:
+      - origin
+      - y: 1
+      properties:
+        display_transform: NONE
+
+bread_cupboard:
+  itemname: <white>Bread Cupboard
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/bread_cupboard
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      barriers:
+      - origin
+      - y: 1
+      properties:
+        display_transform: NONE
+
+gyros_grill:
+  itemname: <white>Gyros Grill
+  material: PAPER
+  Pack:
+    model: starleague:chopchopchaos/furniture/gyros_grill
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+        type: ALLOW
+      hitbox:
+        barriers:
+        - 0,0,0
+      properties:
+        display_transform: NONE

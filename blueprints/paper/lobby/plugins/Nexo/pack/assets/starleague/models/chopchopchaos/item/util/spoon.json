@@ -1,0 +1,69 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "starleague:chopchopchaos/item/util/spoon",
+		"particle": "starleague:chopchopchaos/item/util/spoon"
+	},
+	"elements": [
+		{
+			"from": [7.5, 0, 7.5],
+			"to": [8.5, 5, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [5, 0, 6, 5], "texture": "#0"},
+				"east": {"uv": [5, 5, 6, 10], "texture": "#0"},
+				"south": {"uv": [0, 6, 1, 11], "texture": "#0"},
+				"west": {"uv": [6, 0, 7, 5], "texture": "#0"},
+				"up": {"uv": [2, 7, 1, 6], "texture": "#0"},
+				"down": {"uv": [3, 6, 2, 7], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.5, 5, 8],
+			"to": [8.5, 11, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 5, 7]},
+			"faces": {
+				"north": {"uv": [3, 0, 4, 6], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 6], "texture": "#0"},
+				"south": {"uv": [4, 0, 5, 6], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 6], "texture": "#0"},
+				"up": {"uv": [1, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [1, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.5, 11, 8],
+			"to": [9.5, 14, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 11, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"south": {"uv": [0, 3, 3, 6], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"up": {"uv": [3, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [3, 0, 0, 0], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 3.5, 0]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 3.5, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 70, 0],
+			"translation": [0, 5, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 70, 0],
+			"translation": [0, 5, 0]
+		},
+		"gui": {
+			"rotation": [22.5, 22.5, 0],
+			"translation": [0, 0.75, 0]
+		}
+	}
+}
