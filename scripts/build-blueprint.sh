@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-changed=$(git diff --name-only | xargs -I{} dirname {} | sort -u)
+# what has changed since the last commit
+changed=$(git diff --name-only HEAD~1..HEAD | xargs -I{} dirname {} | sort -u)
 
 for d in $changed ; do
   # get the first two elements of the path. this way we can
