@@ -26,9 +26,7 @@ jobs:
           fetch-depth: 2
       - uses: hashicorp-contrib/setup-packer@v3
       - name: packet init
-        run: |
-          cd blueprints/paper && packer init . && cd -
-          cd blueprints/velocity && packer init . && cd -
+        run: cd templates && packer init .
       - name: install sops
         run: |
           SOPS_VERSION=v3.12.2
