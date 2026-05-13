@@ -36,9 +36,8 @@ if [ -z "$(git status --porcelain)" ]; then
   exit 0
 fi
 
-git pull --rebase
 git diff
 git config --local user.email "tobor@chunks.cloud"
 git config --local user.name "tobor"
 git commit -a -m "[no ci] $1: update $old_version to $new_version" -m "git sha: $sha"
-git push
+git push origin:main
