@@ -51,38 +51,37 @@ jobs:
         run: |
           cd minecraft-blueprints
           ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
-      # - name: adjust paper deployments
-      #   run: |
-      #     cd minecraft-blueprints/${{ inputs.blueprint }}
-      #     git pull --rebase
+      - name: adjust paper deployments
+        run: |
+          cd minecraft-blueprints/${{ inputs.blueprint }}
 
-      #     # the deployment and platform is based on the last two
-      #     # parent dirswhere the config.pkrvars.json lives. for a
-      #     # config at blueprints/paper/lobby/config.pkrvars.json
-      #     # it would be deployment_name=lobby and platform=paper.
-      #     deployment_name=$(basename $(dirname $p))
+          # the deployment and platform is based on the last two
+          # parent dirswhere the config.pkrvars.json lives. for a
+          # config at blueprints/paper/lobby/config.pkrvars.json
+          # it would be deployment_name=lobby and platform=paper.
+          deployment_name=$(basename $(dirname $p))
 
-      #     platform=$(basename $(dirname $(dirname $p)))
-      #     version=$(cat $p | jq -r '.version')
-      #     image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
-      #     file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
+          platform=$(basename $(dirname $(dirname $p)))
+          version=$(cat $p | jq -r '.version')
+          image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
+          file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
 
-      #     echo "updating $deployment_name ($platform) to $image"
-      #     yq -iy \
-      #       --arg img "$image" \
-      #       '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
-      #       "$file"
-      # - name: push updates
-      #   run: |
-      #     cd infra
+          echo "updating $deployment_name ($platform) to $image"
+          yq -iy \
+            --arg img "$image" \
+            '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
+            "$file"
+      - name: push updates
+        run: |
+          cd infra
 
-      #     if [ -z "$(git status --porcelain)" ]; then
-      #       echo "no changes detected. exiting."
-      #       exit 0
-      #     fi
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes detected. exiting."
+            exit 0
+          fi
 
-      #     git diff
-      #     git config --local user.email "tobor@chunks.cloud"
-      #     git config --local user.name "tobor"
-      #     git commit -a -m "app1-euc-prod: update minecraft deployments"
-      #     git push
+          git diff
+          git config --local user.email "tobor@chunks.cloud"
+          git config --local user.name "tobor"
+          git commit -a -m "app1-euc-prod: update minecraft deployments"
+          git push
