@@ -27,6 +27,9 @@ new_version_tag=ghcr.io/spacechunks/blueprints/$name:$new_version
 tmp=$(mktemp)
 jq --arg new "$new_version" '.version = $new' config.pkrvars.json > "$tmp" && mv "$tmp" config.pkrvars.json
 
+echo "rev_tag: $rev_tag"
+echo "new_version_tag: $new_version_tag"
+
 docker image pull $rev_tag
 docker image tag $rev_tag $new_version_tag
 docker push $new_version_tag
