@@ -16,6 +16,12 @@ for d in $changed ; do
   # next component is the blueprint
   blueprint=$(echo $d | cut -d/ -f1-3 | sort -u)
 
+  # ignore changes on the pkr config
+  if [ "$blueprint" == "blueprint.pkr.hcl" ]; then
+    echo "no changes on any blueprints"
+    exit 0
+  fi
+
   echo "building $blueprint"
   cd $blueprint
 
