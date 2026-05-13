@@ -19,6 +19,12 @@ jobs:
       AWS_REGION: nbg1
       SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
     steps:
+      - name: docker login
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v6
         with:
           # we need at least the last commit, so we can detect
