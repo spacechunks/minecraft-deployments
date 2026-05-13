@@ -20,6 +20,10 @@ jobs:
       SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          # we need at least the last commit, so we can detect
+          # where changes happened in build-blueprint.sh
+          fetch-depth: 2
       - uses: hashicorp-contrib/setup-packer@v3
       - name: packet init
         run: |
