@@ -30,7 +30,7 @@ jobs:
           fallback="${{ github.sha }}"
           final="${input:-$fallback}"
           echo "using: $final"
-          echo "result=$final"
+          echo "result=$final" >> $GITHUB_OUTPUT
       - name: checkout blueprints
         uses: actions/checkout@v6
         with:
