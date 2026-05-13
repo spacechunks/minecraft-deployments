@@ -1,0 +1,77 @@
+name: deploy to prod
+on:
+  workflow_dispatch:
+    inputs:
+      blueprint:
+        description: The blueprint that will be deployed to prod
+        required: true
+        type: choice
+        options:
+          - paper/lobby
+          - velocity/gateway
+          - velocity/lobby-proxy
+      commit:
+        description: The commit that will be deployed to prod
+        required: false
+        default: ${{ github.sha }}
+        type: string
+jobs:
+  deploy:
+    environment: prod
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: checkout blueprints
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.commit }}
+          path: minecraft-blueprints
+      - name: checkout infra
+        uses: actions/checkout@v6
+        with:
+          repository: spacechunks/infra
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: infra
+      - name: install tools
+        run: |
+          sudo apt update
+          sudo apt install -y jq yq
+      - name: bump blueprint version
+        run: ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
+      - name: adjust paper deployments
+        run: |
+          cd minecraft-blueprints/${{ inputs.blueprint }}
+          git pull --rebase
+
+          # the deployment and platform is based on the last two
+          # parent dirswhere the config.pkrvars.json lives. for a
+          # config at blueprints/paper/lobby/config.pkrvars.json
+          # it would be deployment_name=lobby and platform=paper.
+          deployment_name=$(basename $(dirname $p))
+
+          platform=$(basename $(dirname $(dirname $p)))
+          version=$(cat $p | jq -r '.version')
+          image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
+          file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
+
+          echo "updating $deployment_name ($platform) to $image"
+          yq -iy \
+            --arg img "$image" \
+            '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
+            "$file"
+      - name: push updates
+        run: |
+          cd infra
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes detected. exiting."
+            exit 0
+          fi
+
+          git diff
+          git config --local user.email "tobor@chunks.cloud"
+          git config --local user.name "tobor"
+          git commit -a -m "app1-euc-prod: update minecraft deployments"
+          git push
