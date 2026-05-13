@@ -40,4 +40,4 @@ git diff
 git config --local user.email "tobor@chunks.cloud"
 git config --local user.name "tobor"
 git commit -a -m "[no ci] $1: update $old_version to $new_version" -m "git sha: $sha"
-git push origin:main
+git push origin HEAD:main
