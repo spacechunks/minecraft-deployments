@@ -36,6 +36,8 @@ jobs:
         with:
           ref: ${{ steps.resolve_commit.outputs.result }}
           path: minecraft-blueprints
+      - name: bump blueprint version
+        run: ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
       - name: checkout infra
         uses: actions/checkout@v6
         with:
@@ -46,8 +48,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y jq yq
-      - name: bump blueprint version
-        run: ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
       # - name: adjust paper deployments
       #   run: |
       #     cd minecraft-blueprints/${{ inputs.blueprint }}
