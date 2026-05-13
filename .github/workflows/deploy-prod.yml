@@ -65,9 +65,9 @@ jobs:
           # parent dirswhere the config.pkrvars.json lives. for a
           # config at blueprints/paper/lobby/config.pkrvars.json
           # it would be deployment_name=lobby and platform=paper.
-          deployment_name=$(basename $(dirname $p))
+          deployment_name=$(basename $(pwd))
+          platform=$(basename $(dirname $(pwd)))
 
-          platform=$(basename $(dirname $(dirname $p)))
           version=$(cat $p | jq -r '.version')
           image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
           file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
