@@ -1,6 +1,6 @@
 {
   "name": "lobby-proxy",
-  "version": "2026.18.3",
+  "version": "2026.20.1",
   "velocity_version": "3.5.0-SNAPSHOT-576",
   "files": [
     {
@@ -20,5 +20,7 @@
       "destination": "/opt/velocity/plugins/LuckPerms-Velocity-5.5.17.jar"
     }
   ],
-  "secrets": ["forwarding.secret.sops"]
+  "secrets": [
+    "forwarding.secret.sops"
+  ]
 }
