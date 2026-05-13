@@ -59,16 +59,14 @@ jobs:
           ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
       - name: adjust paper deployments
         run: |
-          cd minecraft-blueprints/blueprints/${{ inputs.blueprint }}
-
           # the deployment and platform is based on the last two
-          # parent dirswhere the config.pkrvars.json lives. for a
-          # config at blueprints/paper/lobby/config.pkrvars.json
+          # parent dirs. for a config at blueprints/paper/lobby
           # it would be deployment_name=lobby and platform=paper.
-          deployment_name=$(basename $(pwd))
-          platform=$(basename $(dirname $(pwd)))
+          blueprint_dir="minecraft-blueprints/blueprints/${{ inputs.blueprint }}"
+          platform=$(echo $blueprint_dir | cut -d/ -f3)
+          deployment_name=$(echo $blueprint_dir | cut -d/ -f4)
 
-          version=$(cat $p | jq -r '.version')
+          version=$(cat $blueprint_dir/config.pkrvars.json | jq -r '.version')
           image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
           file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
 
