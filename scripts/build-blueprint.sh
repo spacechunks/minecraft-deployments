@@ -19,7 +19,7 @@ for d in $changed ; do
   # ignore changes on the pkr config
   if [ "$blueprint" == "blueprint.pkr.hcl" ]; then
     echo "no changes on any blueprints"
-    exit 0
+    continue
   fi
 
   echo "building $blueprint"
