@@ -19,12 +19,16 @@ for d in $changed ; do
   echo "building $blueprint"
   cd $blueprint
 
-  sha=$(git rev-parse HEAD)
   name=$(cat config.pkrvars.json | jq -r .name)
-  tag=ghcr.io/spacechunks/blueprints/$name:$sha
+  version=$(cat config.pkrvars.json | jq -r .version)
+  tag=ghcr.io/spacechunks/blueprints/$name:$version
 
-  tmp=$(mktemp)
-  jq --arg new "$sha" '.version = $new' config.pkrvars.json > "$tmp" && mv "$tmp" config.pkrvars.json
+  exists=$(docker manifest inspect $tag > /dev/null ; echo $?)
+
+  if [ $exists == 0 ]; then
+    echo "$tag already exists. skipping."
+    continue
+  fi
 
   packer build -parallel-builds=1 -var-file=config.pkrvars.json "../../../templates/$platform.pkr.hcl"
 

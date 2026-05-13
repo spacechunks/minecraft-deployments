@@ -53,10 +53,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: bump blueprint version
-        run: |
-          cd minecraft-blueprints
-          ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
       - name: adjust paper deployments
         run: |
           # the deployment and platform is based on the last two
@@ -87,5 +83,5 @@ jobs:
           git diff
           git config --local user.email "tobor@chunks.cloud"
           git config --local user.name "tobor"
-          git commit -a -m "app1-euc-prod: update minecraft deployments"
+          git commit -a -m "app1-euc-prod: update $deployment_name to $version"
           git push
