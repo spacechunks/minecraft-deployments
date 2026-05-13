@@ -10,7 +10,7 @@ jobs:
       contents: read
       packages: write
     env:
-      BUILD_OCI_REG_USER: ${{ github.repository_owner }}
+      BUILD_OCI_REG_USER: ${{ github.actor }}
       BUILD_OCI_REG_PASS: ${{ secrets.GITHUB_TOKEN }}
       BUILD_OCI_REG_SERVER: ghcr.io
       AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
