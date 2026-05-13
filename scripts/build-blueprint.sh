@@ -5,22 +5,16 @@ set -e
 changed=$(git diff --name-only HEAD~1..HEAD | xargs -I{} dirname {} | sort -u)
 
 for d in $changed ; do
-  # get the first two elements of the path. this way we can
+  # get the second element of the path. this way we can
   # can determine if the changes happened in a directory where
   # we can actually build something
-  platform=$(echo $d | cut -d/ -f1-2 | sort -u)
-  if [[ "$platform" != "blueprints/paper" && "$platform" != "blueprints/velocity" ]]; then
+  platform=$(echo $d | cut -d/ -f2 | sort -u)
+  if [[ "$platform" != "paper" && "$platform" != "velocity" ]]; then
+    echo "skipping $platform"
     continue
   fi
 
-  # next component is the blueprint
   blueprint=$(echo $d | cut -d/ -f1-3 | sort -u)
-
-  # ignore changes on the pkr config
-  if [ "$blueprint" == *"blueprint.pkr.hcl" ]; then
-    echo "ignoring blueprint.pkr.hcl"
-    continue
-  fi
 
   echo "building $blueprint"
   cd $blueprint
@@ -32,7 +26,7 @@ for d in $changed ; do
   tmp=$(mktemp)
   jq --arg new "$sha" '.version = $new' config.pkrvars.json > "$tmp" && mv "$tmp" config.pkrvars.json
 
-  packer build -parallel-builds=1 -var-file=config.pkrvars.json ../blueprint.pkr.hcl
+  packer build -parallel-builds=1 -var-file=config.pkrvars.json "../../templates/$platform.pkr.hcl"
 
   cd -
 done
