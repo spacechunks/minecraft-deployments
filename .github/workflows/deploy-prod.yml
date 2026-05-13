@@ -68,7 +68,7 @@ jobs:
 
           version=$(cat $blueprint_dir/config.pkrvars.json | jq -r '.version')
           image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
-          file="../infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
+          file="infra/flux/app1-euc-prod/minecraft/$deployment_name.deployment.yaml"
 
           echo "updating $deployment_name ($platform) to $image"
           yq -iy \
