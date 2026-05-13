@@ -26,9 +26,9 @@ jobs:
       - name: resolve commit
         id: resolve_commit
         run: |
-          input=${{ inputs.commit }}
-          fallback="${{ github.sha }}
-          final=${INPUT:-$FALLBACK}
+          input="${{ inputs.commit }}"
+          fallback="${{ github.sha }}"
+          final="${INPUT:-$FALLBACK}"
           echo "using: $final"
           echo "result=$final"
       - name: checkout blueprints
