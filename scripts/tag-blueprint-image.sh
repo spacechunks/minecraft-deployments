@@ -36,6 +36,7 @@ if [ -z "$(git status --porcelain)" ]; then
   exit 0
 fi
 
+git pull --rebase
 git diff
 git config --local user.email "tobor@chunks.cloud"
 git config --local user.name "tobor"
