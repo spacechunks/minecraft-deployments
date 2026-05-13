@@ -1,3 +1,4 @@
+// some comment
 packer {
   required_plugins {
     docker = {
