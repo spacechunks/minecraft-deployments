@@ -59,7 +59,7 @@ jobs:
           ./scripts/tag-blueprint-image.sh ${{ inputs.blueprint }}
       - name: adjust paper deployments
         run: |
-          cd minecraft-blueprints/${{ inputs.blueprint }}
+          cd minecraft-blueprints/blueprints/${{ inputs.blueprint }}
 
           # the deployment and platform is based on the last two
           # parent dirswhere the config.pkrvars.json lives. for a
