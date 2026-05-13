@@ -36,4 +36,10 @@ jobs:
           curl -LO https://github.com/getsops/sops/releases/download/$SOPS_VERSION/sops-$SOPS_VERSION.linux.$SOPS_ARCH
           mv sops-$SOPS_VERSION.linux.$SOPS_ARCH /usr/local/bin/sops
           chmod +x /usr/local/bin/sops
+      - name: login to ghcr.io
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - run: ./scripts/build-blueprint.sh
