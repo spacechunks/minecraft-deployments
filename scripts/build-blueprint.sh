@@ -26,7 +26,7 @@ for d in $changed ; do
   tmp=$(mktemp)
   jq --arg new "$sha" '.version = $new' config.pkrvars.json > "$tmp" && mv "$tmp" config.pkrvars.json
 
-  packer build -parallel-builds=1 -var-file=config.pkrvars.json "../../templates/$platform.pkr.hcl"
+  packer build -parallel-builds=1 -var-file=config.pkrvars.json "../../../templates/$platform.pkr.hcl"
 
   cd -
 done
