@@ -54,6 +54,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: adjust paper deployments
+        id: paper_deployments
         run: |
           # the deployment and platform is based on the last two
           # parent dirs. for a config at blueprints/paper/lobby
@@ -71,6 +72,8 @@ jobs:
             --arg img "$image" \
             '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
             "$file"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "deployment_name=$version" >> $GITHUB_OUTPUT
       - name: push updates
         run: |
           cd infra
@@ -79,6 +82,9 @@ jobs:
             echo "no changes detected. exiting."
             exit 0
           fi
+
+          version=${{ steps.paper_deployments.outputs.version }}
+          deployment_name=${{ steps.paper_deployments.outputs.deployment_name }}
 
           git diff
           git config --local user.email "tobor@chunks.cloud"
