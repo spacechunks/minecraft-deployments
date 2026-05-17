@@ -73,7 +73,7 @@ jobs:
             '(.spec.template.spec.containers[] | select(.name == "server") | .image) = $img' \
             "$file"
           echo "version=$version" >> $GITHUB_OUTPUT
-          echo "deployment_name=$version" >> $GITHUB_OUTPUT
+          echo "deployment_name=$deployment_name" >> $GITHUB_OUTPUT
       - name: push updates
         run: |
           cd infra
