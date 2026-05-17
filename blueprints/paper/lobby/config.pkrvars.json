@@ -4,7 +4,7 @@
   "paper_version": "1.21.11-126",
   "files": [
     {
-      "source": "spc-mc/lobby/plugins/lobby-2026.20.5.jar",
+      "source": "spc-mc/plugins/paper/lobby-2026.20.5.jar",
       "destination": "/opt/paper/plugins/lobby.jar"
     },
     {
