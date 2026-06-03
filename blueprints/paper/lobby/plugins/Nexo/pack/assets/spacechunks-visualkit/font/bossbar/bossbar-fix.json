@@ -50,11 +50,18 @@
     },
     {
       "type": "bitmap",
-      "file": "spacechunks-visualkit:font/bossbar/loading.png",
+      "file": "spacechunks-visualkit:font/assets/common/spinner-translucent.png",
       "ascent": 1,
       "height": 20,
       "chars": [
-        "\uE301"
+        "\uE300",
+        "\uE301",
+        "\uE302",
+        "\uE303",
+        "\uE304",
+        "\uE305",
+        "\uE306",
+        "\uE307"
       ]
     }
   ]
