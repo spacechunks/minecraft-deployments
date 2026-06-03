@@ -19,6 +19,21 @@
       "type": "bitmap", "height": 8, "ascent": 7,
       "file": "chunkexplorer:font/text/icon/player-rank.png",
       "chars": [ "\uE200" ]
+    },
+    {
+      "type": "bitmap", "height": 24, "ascent": 24,
+      "file": "chunkexplorer:font/text/sprites/wasd.png",
+      "chars": [ "\uE300", "\uE301", "\uE302", "\uE303" ]
+    },
+    {
+      "type": "bitmap", "height": 8, "ascent": 7,
+      "file": "chunkexplorer:font/text/sprites/space.png",
+      "chars": [ "\uE304", "\uE305" ]
+    },
+    {
+      "type": "bitmap", "height": 12, "ascent": 12,
+      "file": "chunkexplorer:font/text/sprites/shift.png",
+      "chars": [ "\uE306", "\uE307" ]
     }
   ]
 }

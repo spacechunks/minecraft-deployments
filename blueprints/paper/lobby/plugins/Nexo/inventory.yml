@@ -1,4 +1,7 @@
 NexoInventory:
+  creative:
+    items_per_packet: 20
+    layout: {}
   type: DIRECTORY
   style_default_names: true
   menu_title: <shift:-37><glyph:menu_items_search>
