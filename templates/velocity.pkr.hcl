@@ -34,8 +34,8 @@ variable "files" {
 }
 
 variable "secrets" {
-  type = list(string)
-  default = []
+  type = map(string)
+  default = {}
 }
 
 variable "name" {
@@ -66,31 +66,26 @@ build {
     "source.docker.amd64"
   ]
 
-  dynamic "provisioner" {
-    for_each = var.secrets
-    labels = ["shell-local"]
-    content {
-      script = "../../../scripts/sops-decrypt.sh"
-      env = {
-        "ENCRYPTED_FILE": provisioner.value
-      }
-    }
-  }
-
   provisioner "file" {
     destination = "/opt/velocity"
     source = "."
   }
 
   dynamic "provisioner" {
-    for_each = var.secrets
-    labels = ["shell-local"]
+    for_each = local.rendered_files
+    labels   = ["file"]
     content {
-      script = "../../../scripts/sops-encrypt.sh"
-      env = {
-        "ENCRYPTED_FILE": provisioner.value
-      }
+      content     = provisioner.value
+      destination = "/opt/velocity/${trimsuffix(provisioner.key, ".tpl")}"
     }
+  }
+
+  provisioner "shell" {
+    inline = ["find /opt/velocity \\( -name '*.tpl' -or -name '*.pkrvars.json' -or -name '*.sops.json' \\) -delete"]
+  }
+
+  provisioner "shell-local" {
+    inline = ["find . -name secrets.pkrvars.json -delete"]
   }
 
   // fixes

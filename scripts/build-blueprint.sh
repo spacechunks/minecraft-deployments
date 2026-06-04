@@ -15,22 +15,25 @@ for d in $changed ; do
   fi
 
   blueprint=$(echo $d | cut -d/ -f1-3 | sort -u)
-
   echo "building $blueprint"
-  cd $blueprint
 
-  name=$(cat config.pkrvars.json | jq -r .name)
-  version=$(cat config.pkrvars.json | jq -r .version)
-  tag=ghcr.io/spacechunks/blueprints/$name:$version
+  # run in subshell so we don't have to cd out of the blueprint again
+  (
+    cd $blueprint
 
-  exists=$(docker manifest inspect $tag > /dev/null ; echo $?)
+    name=$(cat config.pkrvars.json | jq -r .name)
+    version=$(cat config.pkrvars.json | jq -r .version)
+    tag=ghcr.io/spacechunks/blueprints/$name:$version
 
-  if [ $exists == 0 ]; then
-    echo "$tag already exists. skipping."
-    continue
-  fi
+    exists=$(docker manifest inspect $tag > /dev/null ; echo $?)
 
-  packer build -parallel-builds=1 -var-file=config.pkrvars.json "../../../templates/$platform.pkr.hcl"
+    if [ $exists == 0 ]; then
+      echo "$tag already exists. skipping."
+      continue
+    fi
 
-  cd -
+    sops -d secrets.pkrvars.sops.json > secrets.pkrvars.json
+
+    packer build -parallel-builds=1 -var-file=config.pkrvars.json -var-file=secrets.pkrvars.json "../../../templates/$platform.pkr.hcl"
+  )
 done
