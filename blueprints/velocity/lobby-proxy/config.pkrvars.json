@@ -19,6 +19,5 @@
       "source": "spc-mc/velocity/plugins/LuckPerms-Velocity-5.5.17.jar",
       "destination": "/opt/velocity/plugins/LuckPerms-Velocity-5.5.17.jar"
     }
-  ],
-  "secrets": ["forwarding.secret.sops"]
+  ]
 }

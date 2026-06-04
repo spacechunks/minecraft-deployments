@@ -39,8 +39,8 @@ Glyphs:
   unicode_completions: true
   default_permission: nexo.glyphs.<glyphid>
   default_font: nexo:default
-  default_shadow_color: '#00000000'
-  hover_text: ''
+  default_shadow_color: "#00000000"
+  hover_text: ""
   shift_font: nexo:shift
 ConfigTools:
   generate_default_configs: false
@@ -84,9 +84,9 @@ Pack:
     minimize_json: false
     read_lenient: true
     excluded_file_extensions:
-    - .zip
-    - .tar.gz
-    - .psd
+      - .zip
+      - .tar.gz
+      - .psd
     packsquash:
       enabled: false
       executable_path: plugins/Nexo/pack/packsquash/packsquash
@@ -110,7 +110,7 @@ Pack:
   server:
     type: POLYMATH
     selfhost:
-      public_address: ''
+      public_address: ""
       port: 8082
       dispatch_threads: 10
     polymath:
@@ -137,8 +137,8 @@ Pack:
     prompt: Accept the pack to enjoy a full experience
 Furniture:
   allowed_gamemodes_for_rotation:
-  - SURVIVAL
-  - CREATIVE
+    - SURVIVAL
+    - CREATIVE
   anti_cheat:
     spartan_hook: false
     vulcan_hook: false

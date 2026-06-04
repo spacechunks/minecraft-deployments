@@ -4,4 +4,4 @@ proxies:
   velocity:
     enabled: true
     online-mode: true
-    secret: lcpJw4ZRihxljAoBEdQY97idegrZU8viG3anh6
+    secret: ${velocity_secret}
