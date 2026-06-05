@@ -1,4 +1,4 @@
-Minecraft blueprints
+Minecraft deployments
 ====================
 
 This repository contains all blueprints for our Minecraft deployments.
