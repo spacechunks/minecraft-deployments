@@ -1,10 +1,10 @@
 {
   "name": "lobby",
-  "version": "2026.23.8",
-  "paper_version": "1.21.11-127",
+  "version": "2026.23.9",
+  "paper_version": "26.1.2-66",
   "files": [
     {
-      "source": "spc-mc/plugins/paper/lobby-2026.23.5.jar",
+      "source": "spc-mc/plugins/paper/lobby-2026.23.6.jar",
       "destination": "/opt/paper/plugins/lobby.jar"
     },
     {
@@ -12,7 +12,7 @@
       "destination": "/opt/paper/plugins/nexo-1.20-dev-1d9a9712.jar"
     },
     {
-      "source": "spc-mc/plugins/paper/WorldService-2026.20.5.jar",
+      "source": "spc-mc/plugins/paper/WorldService-2026.23.1.jar",
       "destination": "/opt/paper/plugins/WorldService.jar"
     }
   ]
