@@ -1,5 +1,5 @@
 backend:
-  endpoint: "http://localhost:9080"
+  endpoint: "https://api.world-service.chunks.cloud/"
   token: "${world_service_token}"
 
 mode: RUNTIME
