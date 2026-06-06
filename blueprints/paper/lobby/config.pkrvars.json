@@ -10,6 +10,10 @@
     {
       "source": "spc-mc/lobby/plugins/nexo-1.20-dev-1d9a9712.jar",
       "destination": "/opt/paper/plugins/nexo-1.20-dev-1d9a9712.jar"
+    },
+    {
+      "source": "spc-mc/plugins/paper/WorldService-2026.20.5.jar",
+      "destination": "/opt/paper/plugins/WorldService.jar"
     }
   ]
 }
