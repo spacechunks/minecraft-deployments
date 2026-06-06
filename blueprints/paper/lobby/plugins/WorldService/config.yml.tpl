@@ -7,12 +7,12 @@ disabledCommands: []
 worldListRefreshIntervalSeconds: 30
 
 worldMappings:
-  - localName: "devlobby"
-    remoteName: "devlobby"
+  - localName: "blueprint-lobby"
+    remoteName: "blueprint-lobby"
 
 startupWorlds:
-  - localName: "devlobby"
-    remoteName: "devlobby"
+  - localName: "blueprint-lobby"
+    remoteName: "blueprint-lobby"
     version: "latest"
     load: true
     pull: true
