@@ -19,6 +19,8 @@ spawn:
 chunkViewer:
   instancePollIntervalSeconds: 1
   gatewayAddress: 94.130.228.127:30577
+  matchmaking:
+    endpoint: mm.explorer.svc.cluster.local:6789
   controlPlane:
     endpoint: api.explorer.stag.chunks.cloud:443
     apiToken: ${control_plane_api_token}
