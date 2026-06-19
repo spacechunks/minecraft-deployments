@@ -14,7 +14,7 @@ spawn:
   world: blueprint-lobby
   location:
     x: -434.5
-    y: -77.0
+    y: 77.0
     z: 48.5
 chunkViewer:
   instancePollIntervalSeconds: 1
