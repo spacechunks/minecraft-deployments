@@ -60,6 +60,15 @@ source "docker" "amd64" {
   run_command = ["-d", "-i", "-t", "{{.Image}}"]
 }
 
+locals {
+  rendered_files = {
+    for f in fileset(path.cwd, "**/*.tpl") :
+      # path.root would be paper/lobby/config/blabla, but we need to cut out the "paper/lobby" part
+      # of the string, so we are left with the relative path from the servers root directory.
+      f => templatefile("${path.cwd}/${f}", var.secrets)
+  }
+}
+
 build {
   sources = [
     //"source.docker.arm64",
