@@ -32,8 +32,11 @@ for d in $changed ; do
       continue
     fi
 
-    sops -d secrets.pkrvars.sops.json > secrets.pkrvars.json
-
-    packer build -parallel-builds=1 -var-file=config.pkrvars.json -var-file=secrets.pkrvars.json "../../../templates/$platform.pkr.hcl"
+    if [ -f "secrets.pkrvars.sops.json" ]; then
+        sops -d secrets.pkrvars.sops.json > secrets.pkrvars.json
+        packer build -parallel-builds=1 -var-file=config.pkrvars.json -var-file=secrets.pkrvars.json "../../../templates/$platform.pkr.hcl"
+    else
+      packer build -parallel-builds=1 -var-file=config.pkrvars.json "../../../templates/$platform.pkr.hcl"
+    fi
   )
 done
