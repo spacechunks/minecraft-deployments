@@ -13,9 +13,9 @@ resourcePack:
 spawn:
   world: blueprint-lobby
   location:
-    x: 0.5
-    y: -42.0
-    z: 0.5
+    x: -434.5
+    y: -77.0
+    z: 48.5
 chunkViewer:
   instancePollIntervalSeconds: 1
   gatewayAddress: 94.130.228.127:30577
