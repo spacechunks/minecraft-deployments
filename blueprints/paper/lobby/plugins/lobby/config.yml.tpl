@@ -16,11 +16,11 @@ spawn:
     x: -434.5
     y: 77.0
     z: 48.5
-chunkViewer:
-  instancePollIntervalSeconds: 1
+matchmaking:
+  endpoint: mm.explorer.svc.cluster.local:6789
   gatewayAddress: 94.130.228.127:30577
-  matchmaking:
-    endpoint: mm.explorer.svc.cluster.local:6789
-  controlPlane:
-    endpoint: api.explorer.stag.chunks.cloud:443
-    apiToken: ${control_plane_api_token}
+  ticketPollIntervalSeconds: 1
+controlPlane:
+  endpoint: api.explorer.stag.chunks.cloud:443
+  apiToken: ${control_plane_api_token}
+  instancePollIntervalSeconds: 1
