@@ -29,7 +29,7 @@ for d in $changed ; do
 
     if [ $exists == 0 ]; then
       echo "$tag already exists. skipping."
-      continue
+      exit 0
     fi
 
     if [ -f "secrets.pkrvars.sops.json" ]; then
