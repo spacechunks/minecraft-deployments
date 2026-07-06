@@ -1,10 +1,10 @@
 {
   "name": "lobby",
-  "version": "2026.28.2",
+  "version": "2026.28.3",
   "paper_version": "26.1.2-66",
   "files": [
     {
-      "source": "spc-mc/plugins/paper/lobby-2026.28.1.jar",
+      "source": "spc-mc/plugins/paper/lobby-2026.28.2.jar",
       "destination": "/opt/paper/plugins/lobby.jar"
     },
     {
