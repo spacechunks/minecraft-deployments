@@ -34,3 +34,4 @@ enable-player-address-logging = false
 announce-proxy-commands = true
 log-player-connections = false
 accepts-transfers = true
+connection-timeout = 10000
