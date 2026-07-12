@@ -1,10 +1,10 @@
 {
   "name": "lobby",
-  "version": "2026.28.5",
+  "version": "2026.28.6",
   "paper_version": "26.1.2-66",
   "files": [
     {
-      "source": "spc-mc/plugins/paper/lobby-2026.28.4.jar",
+      "source": "spc-mc/plugins/paper/lobby-2026.28.5.jar",
       "destination": "/opt/paper/plugins/lobby.jar"
     },
     {
@@ -14,6 +14,10 @@
     {
       "source": "spc-mc/plugins/paper/WorldService-2026.23.1.jar",
       "destination": "/opt/paper/plugins/WorldService.jar"
+    },
+    {
+      "source": "spc-mc/plugins/paper/bettermodel-3.2.0.jar",
+      "destination": "/opt/paper/plugins/bettermodel.jar"
     }
   ]
 }
