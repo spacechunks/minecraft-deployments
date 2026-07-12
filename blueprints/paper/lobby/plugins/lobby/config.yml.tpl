@@ -16,6 +16,10 @@ spawn:
     x: -434.5
     y: 77.0
     z: 48.5
+  roboLocation:
+    x: -434.5
+    y: 77.0
+    z: 54.5
 matchmaking:
   endpoint: mm.explorer.svc.cluster.local:6789
   gatewayAddress: 94.130.228.127:30577
