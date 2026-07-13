@@ -11,6 +11,7 @@ resourcePack:
     endpoint: ${s3_endpoint}
     packObjectKey: explorer/latest.zip
 spawn:
+  postgresDSN: ${postgres_dsn}
   world: blueprint-lobby
   location:
     x: -434.5
