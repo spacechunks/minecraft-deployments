@@ -1,0 +1,30 @@
+ceiling_lamp:
+  itemname: <white>Ceiling Lamp
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/lighting/ceiling_lamp_off
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        interactions:
+        - 0,0,-1 1,0.75
+        - 0,0,0 1,0.75
+        - 0,0,1 1,0.75
+      rotatable: true
+      lights:
+        toggleable: true
+        toggled_model: ceiling_lamp_on
+        lights:
+        - 0,0,-1 12
+        - 0,0,1 12
+      properties:
+        display_transform: NONE
+ceiling_lamp_on:
+  itemname: <white>Ceiling Lamp
+  material: POPPED_CHORUS_FRUIT
+  excludeFromInventory: true
+  Pack:
+    model: spacechunks-extended:props/lighting/ceiling_lamp_on

@@ -1,0 +1,31 @@
+balloons:
+  itemname: Balloons
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: spacechunks-extended:items/icons/balloons.png
+gear:
+  itemname: Gear
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: spacechunks-extended:items/icons/gear.png
+crate:
+  itemname: Crate
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: spacechunks-extended:items/icons/crate.png
+map:
+  itemname: Map
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: spacechunks-extended:items/icons/map.png
+compass:
+  itemname: Compass
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: spacechunks-extended:items/icons/compass.png
+

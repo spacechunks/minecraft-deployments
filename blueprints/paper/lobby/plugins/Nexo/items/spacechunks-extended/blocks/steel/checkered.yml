@@ -1,0 +1,120 @@
+white_checkered_steel_plate:
+  itemname: White Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_white.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 33
+  templates:
+  - t_block_sound_metal
+purple_checkered_steel_plate:
+  itemname: Purple Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_purple.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 34
+  templates:
+  - t_block_sound_metal
+yellow_checkered_steel_plate:
+  itemname: Yellow Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_yellow.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 35
+  templates:
+  - t_block_sound_metal
+blue_checkered_steel_plate:
+  itemname: Blue Checkered Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_blue.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 36
+  templates:
+  - t_block_sound_metal
+checkered_block:
+  itemname: Checkered Block
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 37
+  templates:
+  - t_block_sound_metal
+checkered_steel_plate_corner:
+  itemname: Checkered Steel Plate Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_corner.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 38
+        south_variation: 39
+        west_variation: 40
+        east_variation: 41
+        up_variation: 42
+        down_variation: 43
+      custom_variation: 38
+  templates:
+  - t_block_sound_metal
+checkered_steel_plate_inner_corner:
+  itemname: Checkered Steel Plate Inner Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_inner_corner.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 45
+        south_variation: 46
+        west_variation: 47
+        east_variation: 48
+        up_variation: 49
+        down_variation: 50
+      custom_variation: 45
+  templates:
+  - t_block_sound_metal
+checkered_steel_plate_edge:
+  itemname: Checkered Steel Plate Edge
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/checkered/plate_edge.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 52
+        south_variation: 53
+        west_variation: 54
+        east_variation: 55
+        up_variation: 56
+        down_variation: 57
+      custom_variation: 52
+  templates:
+  - t_block_sound_metal

@@ -1,0 +1,20 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        "\uF001": -8,
+        "\uF002": -168
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "betternexoinventory:inventory.png",
+      "ascent": 13,
+      "height": 222,
+      "chars": [
+        "\uE001"
+      ]
+    }
+  ]
+}

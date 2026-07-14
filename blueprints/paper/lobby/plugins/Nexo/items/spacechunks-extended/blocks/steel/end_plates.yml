@@ -1,0 +1,60 @@
+end_steel_plate_corner:
+  itemname: End Steel Plate Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/end_plates/plate_corner.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 58
+        south_variation: 59
+        west_variation: 60
+        east_variation: 61
+        up_variation: 62
+        down_variation: 63
+      custom_variation: 58
+  templates:
+  - t_block_sound_metal
+end_steel_plate_inner_corner:
+  itemname: End Steel Plate Inner Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/end_plates/plate_inner_corner.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 65
+        south_variation: 66
+        west_variation: 67
+        east_variation: 68
+        up_variation: 69
+        down_variation: 70
+      custom_variation: 65
+  templates:
+  - t_block_sound_metal
+end_steel_plate_edge:
+  itemname: End Steel Plate Edge
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/end_plates/plate_edge.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 72
+        south_variation: 73
+        west_variation: 74
+        east_variation: 75
+        up_variation: 76
+        down_variation: 77
+      custom_variation: 72
+  templates:
+  - t_block_sound_metal

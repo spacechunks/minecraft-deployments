@@ -1,0 +1,60 @@
+metal_stairs:
+  itemname: <white>metal_stairs
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/stairs/metal_stairs
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0,0.25,-0.5
+rear_ending_metal_stairs:
+  itemname: <white>rear_ending_metal_stairs
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/stairs/metal_stairs_end_rear
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0,0.25,-0.5
+front_ending_metal_stairs:
+  itemname: <white>front_ending_metal_stairs
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/stairs/metal_stairs_end_front
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0,0.25,-0.5
+metal_stairs_railing:
+  itemname: <white>metal_stairs_railing
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/stairs/metal_stairs_with_railing
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0,0.25,-0.5

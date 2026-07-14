@@ -1,0 +1,56 @@
+straight_cable:
+  itemname: <white>Straight Cable
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/cables/cable_straight
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+mounted_straight_cable:
+  itemname: <white>Straight Cable
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/cables/cable_straight_mounted
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+cable_corner:
+  itemname: <white>Cable Corner
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/cables/cable_corner
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+triple_cable_corner:
+  itemname: <white>Cable Corner
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/cables/cable_corner_triple
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE

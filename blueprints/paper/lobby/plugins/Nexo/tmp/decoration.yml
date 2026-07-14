@@ -1,0 +1,48 @@
+ceiling_lamp:
+  displayname: Small Monitor
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    generate_model: false
+    model: movingout/decoration/ceiling_lamp
+    custom_model_data: 1003
+  Mechanics:
+    furniture:
+      type: DISPLAY_ENTITY
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      barrier: true
+      rotatable: false
+      light: 3
+
+chest_big:
+  displayname: Big Booty Chest
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    generate_model: false
+    model: movingout/decoration/chest_big
+    custom_model_data: 1004
+  Mechanics:
+    furniture:
+      type: DISPLAY_ENTITY
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      barrier: true
+      rotatable: false
+
+chest_small:
+  displayname: Small Booty Chest
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    generate_model: false
+    model: movingout/decoration/chest_small
+    custom_model_data: 1005
+  Mechanics:
+    furniture:
+      type: DISPLAY_ENTITY
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      barrier: true
+      rotatable: false

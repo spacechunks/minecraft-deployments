@@ -6,7 +6,7 @@
 
 This repository contains the full contents of the Nexo plugin folder, including all models, textures, shaders, and other assets required for Space Chunks projects.
 
-**Nexo version used:** `1.23.3`
+**Nexo version used:** `1.25`
 
 [Nexo Documentation](https://docs.nexomc.com/) - [Nexo GitHub](https://github.com/Nexomc/Nexo) - [Nexo Discord](https://discord.gg/nexomc)
 </div>

@@ -1,0 +1,71 @@
+emergency_exit_sign:
+  itemname: <white>Emergency Exit Sign
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/safety/emergency_exit_sign
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      properties:
+        display_transform: NONE
+emergency_exit_sign_hanging:
+  itemname: <white>Hanging Emergency Exit Sign
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/safety/emergency_exit_sign_hanging
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: true
+        floor: false
+        wall: false
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      properties:
+        display_transform: NONE
+fire_extinguisher:
+  itemname: <white>Fire Extinguisher
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/safety/fire_extinguisher
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+        type: ALLOW
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      properties:
+        display_transform: NONE
+siren:
+  itemname: <white>Siren
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/safety/siren
+  Mechanics:
+    furniture:
+      limited_placing:
+        roof: true
+        floor: true
+        wall: true
+        type: ALLOW
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      properties:
+        display_transform: NONE

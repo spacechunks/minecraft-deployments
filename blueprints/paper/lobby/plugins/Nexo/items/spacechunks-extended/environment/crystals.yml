@@ -1,0 +1,15 @@
+crystal_shard:
+  itemname: Crystal Shard
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:environment/crystals/crystal_shard.png
+large_crystal_shard:
+  itemname: Large Crystal Shard
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:environment/crystals/large_crystal_shard.png
+small_crystal_shard:
+  itemname: Small Crystal Shard
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:environment/crystals/small_crystal_shard.png

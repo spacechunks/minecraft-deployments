@@ -9,18 +9,19 @@
 # ================================================================
 # Template definitions
 # ================================================================
-#templates:
-#  style_pastel:
-#    required: false          # If true, always applied — players cannot disable
-#    default: false           # Default enabled state for first-time players
-#    conflicts_with:          # Template ids that cannot be enabled simultaneously
-#      - style_retro
-#  style_retro:
-#    default: false
-#    conflicts_with:
-#      - style_pastel
-#  hd_textures:
-#    default: true
+templates:
+  chunkexplorer:
+    required: true       # Always sent to all players, cannot be toggled
+    default: true         # Enabled by default for new players
+    path: "chunkexplorer"
+  spacechunks-vanilla:
+    required: true       # Always sent to all players, cannot be toggled
+    default: true         # Enabled by default for new players
+    path: "spacechunks-vanilla"
+  visual-kit:
+    required: true       # Always sent to all players, cannot be toggled
+    default: true         # Enabled by default for new players
+    path: "visual-kit"
 
 # ================================================================
 # Menu layout

@@ -1,0 +1,70 @@
+straight_railing:
+  itemname: <white>straight_railing
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/railings/railing_straight
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+cornered_railing:
+  itemname: <white>cornered_railing
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/railings/railing_corner
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+ending_railing:
+  itemname: <white>ending_railing
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/railings/railing_end
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+railing_connection:
+  itemname: <white>railing_connection
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/railings/railing_connection
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE
+top_railing_connection:
+  itemname: <white>top_railing_connection
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:structures/railings/railing_connection_top
+  Mechanics:
+    furniture:
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      rotatable: true
+      properties:
+        display_transform: NONE

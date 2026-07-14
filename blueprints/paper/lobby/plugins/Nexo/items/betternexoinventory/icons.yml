@@ -1,0 +1,24 @@
+next_icon:
+  itemname: Next
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: betternexoinventory:next_icon
+next_icon_off:
+  itemname: Next Off
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: betternexoinventory:next_icon_off
+previous_icon:
+  itemname: Previous
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: betternexoinventory:previous_icon
+previous_icon_off:
+  itemname: Previous Off
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: betternexoinventory:previous_icon_off

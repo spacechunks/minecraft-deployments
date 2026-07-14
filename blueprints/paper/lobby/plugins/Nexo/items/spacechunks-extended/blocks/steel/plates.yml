@@ -1,0 +1,64 @@
+steel_plate:
+  itemname: Steel Plate
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/plates/plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 4
+  templates:
+  - t_block_sound_metal
+steel_plate_corner:
+  itemname: Steel Plate Corner
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:blocks/steel/plates/plate.png
+      south: spacechunks-extended:blocks/steel/plates/plate.png
+      east: spacechunks-extended:blocks/steel/plates/plate.png
+      west: spacechunks-extended:blocks/steel/plates/plate.png
+      up: spacechunks-extended:blocks/steel/plates/plate_corner.png
+      down: spacechunks-extended:blocks/steel/plates/plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 5
+        south_variation: 6
+        west_variation: 7
+        east_variation: 8
+        up_variation: 9
+        down_variation: 10
+      custom_variation: 5
+  templates:
+  - t_block_sound_metal
+steel_plate_edge:
+  itemname: Steel Plate Edge
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube
+    textures:
+      north: spacechunks-extended:blocks/steel/plates/plate.png
+      south: spacechunks-extended:blocks/steel/plates/plate.png
+      east: spacechunks-extended:blocks/steel/plates/plate.png
+      west: spacechunks-extended:blocks/steel/plates/plate.png
+      up: spacechunks-extended:blocks/steel/plates/plate_edge.png
+      down: spacechunks-extended:blocks/steel/plates/plate.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 12
+        south_variation: 13
+        west_variation: 14
+        east_variation: 15
+        up_variation: 16
+        down_variation: 17
+      custom_variation: 12
+  templates:
+  - t_block_sound_metal

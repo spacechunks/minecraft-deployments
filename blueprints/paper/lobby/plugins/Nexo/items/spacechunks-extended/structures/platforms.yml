@@ -1,0 +1,11 @@
+platform:
+  itemname: <white>Platform
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: spacechunks-extended:structures/platforms/platform_metal
+  Mechanics:
+    furniture:
+      rotatable: true
+      restricted_rotation: VERY_STRICT
+      properties:
+        display_transform: NONE

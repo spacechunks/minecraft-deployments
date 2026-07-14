@@ -1,0 +1,52 @@
+steel_block:
+  itemname: Steel Block
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/base/block.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 3
+  templates:
+  - t_block_sound_metal
+steel_grid:
+  itemname: Steel Grid
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/base/grid.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      custom_variation: 19
+      directional:
+        type: DROPPER
+        north_variation: 19
+        south_variation: 20
+        west_variation: 21
+        east_variation: 22
+        up_variation: 23
+        down_variation: 24
+  templates:
+  - t_block_sound_metal
+steel_panel:
+  itemname: Steel Panel
+  material: DIAMOND
+  Pack:
+    parent_model: block/cube_all
+    textures: spacechunks-extended:blocks/steel/base/panel.png
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: DROPPER
+        north_variation: 26
+        south_variation: 27
+        west_variation: 28
+        east_variation: 29
+        up_variation: 30
+        down_variation: 31
+      custom_variation: 26
+  templates:
+  - t_block_sound_metal

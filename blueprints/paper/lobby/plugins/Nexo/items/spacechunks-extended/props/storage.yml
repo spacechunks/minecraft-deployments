@@ -1,0 +1,114 @@
+carton:
+  itemname: Carton
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/storage/carton
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      rotatable: true
+      properties:
+        display_transform: NONE
+carton_open:
+  itemname: Open Carton
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/storage/carton_open
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      rotatable: true
+      properties:
+        display_transform: NONE
+large_carton:
+  itemname: Large Carton
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/storage/large_carton
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - 0,0,0
+        - 1,0,0
+        - 0,0,1
+        - 1,0,1
+        - 0,1,0
+        - 1,1,0
+        - 0,1,1
+        - 1,1,1
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0.5,0,-0.5
+storage_crate:
+  itemname: Open Carton
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/storage/storage_crate
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      rotatable: true
+      properties:
+        display_transform: NONE
+double_storage_crate:
+  itemname: Double Storage Crate
+  material: LEATHER_HORSE_ARMOR
+  Pack:
+    model: spacechunks-extended:props/storage/double_storage_crate
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - 0,0,0
+        - 1,0,0
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0.5,0,0
+large_storage_crate:
+  itemname: Large Carton
+  material: POPPED_CHORUS_FRUIT
+  Pack:
+    model: spacechunks-extended:props/storage/large_storage_crate
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - 0,0,0
+        - 1,0,0
+        - 0,0,1
+        - 1,0,1
+        - 0,1,0
+        - 1,1,0
+        - 0,1,1
+        - 1,1,1
+      rotatable: true
+      properties:
+        display_transform: NONE
+        translation: 0.5,0,-0.5
