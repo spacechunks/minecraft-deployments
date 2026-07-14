@@ -15,11 +15,11 @@ spawn:
   world: blueprint
   location:
     x: 0.5
-    y: -60.25
+    y: -60.0
     z: 0.5
   roboLocation:
     x: 0.5
-    y: -60.0
+    y: -59.75
     z: 5.5
 matchmaking:
   endpoint: mm.explorer.svc.cluster.local:6789
