@@ -15,7 +15,7 @@ spawn:
   world: blueprint
   location:
     x: 0.5
-    y: -60.0
+    y: -60.25
     z: 0.5
   roboLocation:
     x: 0.5
