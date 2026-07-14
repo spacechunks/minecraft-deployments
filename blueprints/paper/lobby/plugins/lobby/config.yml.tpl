@@ -23,9 +23,9 @@ spawn:
     z: 54.5
 matchmaking:
   endpoint: mm.explorer.svc.cluster.local:6789
-  gatewayAddress: 94.130.228.127:30577
+  gatewayAddress: w1.c1.prd.infra.chunks.cloud:30577
   ticketPollIntervalSeconds: 1
 controlPlane:
-  endpoint: api.explorer.stag.chunks.cloud:443
+  endpoint: api.explorer.chunks.space:443
   apiToken: ${control_plane_api_token}
   instancePollIntervalSeconds: 1
