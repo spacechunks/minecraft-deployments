@@ -65,7 +65,7 @@ jobs:
 
           version=$(cat $blueprint_dir/config.pkrvars.json | jq -r '.version')
           image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
-          file="infra/flux/app1-euc-prd/minecraft/$deployment_name.deployment.yaml"
+          file="infra/flux/c1-prd/mc/$deployment_name.deployment.yaml"
 
           echo "updating $deployment_name ($platform) to $image"
           yq -iy \
@@ -89,5 +89,5 @@ jobs:
           git diff
           git config --local user.email "tobor@chunks.cloud"
           git config --local user.name "tobor"
-          git commit -a -m "app1-euc-prd: update $deployment_name to $version"
+          git commit -a -m "c1-prd: update $deployment_name to $version"
           git push
