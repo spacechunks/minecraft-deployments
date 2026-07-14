@@ -1,0 +1,13 @@
+{
+  "pack": {
+    "description": "SpaceChunks Blueprint biome datapack",
+    "min_format": [
+      94,
+      1
+    ],
+    "max_format": [
+      101,
+      1
+    ]
+  }
+}
