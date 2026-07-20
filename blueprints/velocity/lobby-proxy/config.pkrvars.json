@@ -1,14 +1,14 @@
 {
   "name": "lobby-proxy",
-  "version": "2026.29.1",
+  "version": "2026.30.1",
   "velocity_version": "3.5.0-SNAPSHOT-605",
   "files": [
     {
-      "source": "spc-mc/velocity/plugins/maintenance-velocity-4.3.0.jar",
+      "source": "spc-mc/plugins/velocity/maintenance-velocity-4.3.0.jar",
       "destination": "/opt/velocity/plugins/maintenance-velocity-4.3.0.jar"
     },
     {
-      "source": "spc-mc/velocity/plugins/minimotd-velocity-2.1.3.jar",
+      "source": "spc-mc/plugins/velocity/minimotd-velocity-2.1.3.jar",
       "destination": "/opt/velocity/plugins/minimotd-velocity-2.1.3.jar"
     },
     {
@@ -16,8 +16,8 @@
       "destination": "/opt/velocity/plugins/viaversion-5.10.0.jar"
     },
     {
-      "source": "spc-mc/velocity/plugins/LuckPerms-Velocity-5.5.17.jar",
-      "destination": "/opt/velocity/plugins/LuckPerms-Velocity-5.5.17.jar"
+      "source": "spc-mc/plugins/velocity/luckperms-velocity-5.5.60.jar",
+      "destination": "/opt/velocity/plugins/luckperms-velocity-5.5.60.jar"
     }
   ]
 }
