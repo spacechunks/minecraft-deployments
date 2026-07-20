@@ -1,6 +1,6 @@
 {
   "name": "lobby-proxy",
-  "version": "2026.30.1",
+  "version": "2026.20.2",
   "velocity_version": "3.5.0-SNAPSHOT-605",
   "files": [
     {
@@ -12,8 +12,8 @@
       "destination": "/opt/velocity/plugins/minimotd-velocity-2.1.3.jar"
     },
     {
-      "source": "spc-mc/plugins/velocity/viaversion-5.10.0.jar",
-      "destination": "/opt/velocity/plugins/viaversion-5.10.0.jar"
+      "source": "spc-mc/plugins/velocity/viaversion-5.11.0.jar",
+      "destination": "/opt/velocity/plugins/viaversion-5.11.0.jar"
     },
     {
       "source": "spc-mc/plugins/velocity/luckperms-velocity-5.5.60.jar",
