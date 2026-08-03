@@ -27,5 +27,11 @@ matchmaking:
   ticketPollIntervalSeconds: 1
 controlPlane:
   endpoint: api.explorer.chunks.space:443
-  apiToken: ${control_plane_api_token}
   instancePollIntervalSeconds: 1
+  auth:
+    clientId: ${control_plane_api_client_id}
+    clientSecret: ${control_plane_api_client_secret}
+    tokenUrl: https://iam.chunks.space/oauth/v2/token
+    claims:
+      - openid
+      - urn:zitadel:iam:org:project:id:384630252262916215:aud
