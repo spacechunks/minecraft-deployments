@@ -32,6 +32,6 @@ controlPlane:
     clientId: ${control_plane_api_client_id}
     clientSecret: ${control_plane_api_client_secret}
     tokenUrl: https://iam.chunks.space/oauth/v2/token
-    claims:
+    scopes:
       - openid
       - urn:zitadel:iam:org:project:id:384630252262916215:aud
