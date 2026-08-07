@@ -14,16 +14,16 @@ for d in $changed ; do
     continue
   fi
 
-  blueprint=$(echo $d | cut -d/ -f1-3 | sort -u)
-  echo "building $blueprint"
+  deployment=$(echo $d | cut -d/ -f1-3 | sort -u)
+  echo "building $deployment"
 
-  # run in subshell so we don't have to cd out of the blueprint again
+  # run in subshell so we don't have to cd out of the deployment again
   (
-    cd $blueprint
+    cd $deployment
 
     name=$(cat config.pkrvars.json | jq -r .name)
     version=$(cat config.pkrvars.json | jq -r .version)
-    tag=ghcr.io/spacechunks/blueprints/$name:$version
+    tag=ghcr.io/spacechunks/minecraft-deployments/$name:$version
 
     exists=$(docker manifest inspect $tag > /dev/null ; echo $?)
 
