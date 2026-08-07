@@ -2,8 +2,8 @@ name: deploy to prod
 on:
   workflow_dispatch:
     inputs:
-      blueprint:
-        description: The blueprint that will be deployed to prod
+      deployment:
+        description: What will be deployed to prod
         required: true
         type: choice
         options:
@@ -31,12 +31,12 @@ jobs:
           final="${input:-$fallback}"
           echo "using: $final"
           echo "result=$final" >> $GITHUB_OUTPUT
-      - name: checkout blueprints
+      - name: checkout deployments
         uses: actions/checkout@v6
         with:
           ref: ${{ steps.resolve_commit.outputs.result }}
           token: ${{ secrets.GH_TOKEN }}
-          path: minecraft-blueprints
+          path: minecraft-deployments
       - name: checkout infra
         uses: actions/checkout@v6
         with:
@@ -57,14 +57,14 @@ jobs:
         id: paper_deployments
         run: |
           # the deployment and platform is based on the last two
-          # parent dirs. for a config at blueprints/paper/lobby
+          # parent dirs. for a config at deployments/paper/lobby
           # it would be deployment_name=lobby and platform=paper.
-          blueprint_dir="minecraft-blueprints/blueprints/${{ inputs.blueprint }}"
-          platform=$(echo $blueprint_dir | cut -d/ -f3)
-          deployment_name=$(echo $blueprint_dir | cut -d/ -f4)
+          deployment_dir="minecraft-deployments/deployments/${{ inputs.deployment }}"
+          platform=$(echo $deployment_dir | cut -d/ -f3)
+          deployment_name=$(echo $deployment_dir | cut -d/ -f4)
 
-          version=$(cat $blueprint_dir/config.pkrvars.json | jq -r '.version')
-          image="ghcr.io/spacechunks/blueprints/$deployment_name:$version"
+          version=$(cat $deployment_dir/config.pkrvars.json | jq -r '.version')
+          image="ghcr.io/spacechunks/minecraft-deployments/$deployment_name:$version"
           file="infra/flux/c1-prd/mc/$deployment_name.deployment.yaml"
 
           echo "updating $deployment_name ($platform) to $image"

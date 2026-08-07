@@ -1,7 +1,7 @@
 Minecraft deployments
 ====================
 
-This repository contains all blueprints for our Minecraft deployments.
+This repository contains all deployments for our Minecraft server.
 
 The following environment variables need to be set:
 ```
