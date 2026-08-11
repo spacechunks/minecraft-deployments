@@ -34,4 +34,4 @@ controlPlane:
     tokenUrl: https://iam.chunks.space/oauth/v2/token
     scopes:
       - openid
-      - urn:zitadel:iam:org:project:id:384630252262916215:aud
+      - urn:zitadel:iam:org:project:id:385828015545778272:aud
