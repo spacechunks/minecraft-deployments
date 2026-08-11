@@ -113,7 +113,7 @@ build {
 
   post-processors {
     post-processor "docker-tag" {
-      repository = "ghcr.io/spacechunks/blueprints/${var.name}"
+      repository = "ghcr.io/spacechunks/minecraft-deployments/${var.name}"
       tags = ["${var.version}"]
     }
 
