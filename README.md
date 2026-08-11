@@ -1,5 +1,4 @@
-Minecraft deployments
-====================
+# Minecraft deployments
 
 This repository contains all deployments for our Minecraft server.
 
@@ -13,3 +12,8 @@ export AWS_SECRET_ACCESS_KEY=my_access_key
 export AWS_ENDPOINT_URL=https://my_endpoint_url
 export AWS_REGION=my_region
 ```
+
+## Update control-plane oauth client credentials
+
+- Update the credentials in the respective `secrets.sops.json` file.
+- If the zitadel project has changed make sure to update the claim to: `urn:zitadel:iam:org:project:id:<new-project-id>:aud`
