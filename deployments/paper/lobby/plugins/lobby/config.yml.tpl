@@ -12,7 +12,7 @@ resourcePack:
     packObjectKey: explorer/latest.zip
 spawn:
   postgresDSN: ${postgres_dsn}
-  world: chunkexplorer_lobby
+  world: chunkexplorer:lobby
   location:
     x: 0.5
     y: 65.0
