@@ -1,0 +1,148 @@
+no-permission: <#62748E>[Map] <#E7020C>Du hast keine Berechtigung dafür.
+player-only: <#62748E>[Map] <#E7020C>Diesen Command kann nur ein Spieler ausführen.
+usage: <#62748E>[Map] <#F1F3F3>Nutze <#ffffff>/map setup<#F1F3F3>, <#ffffff>/map status<#F1F3F3>,
+  <#ffffff>/map set <feature> <true/false><#F1F3F3> oder <#ffffff>/map reload<#F1F3F3>.
+setup-enabled: <#62748E>[Map] <#99E603>Setup Item wurde deinem Inventar hinzugefügt.
+setup-disabled: <#62748E>[Map] <#E7020C>Setup Item wurde aus deinem Inventar entfernt.
+setup-item-missing: <#62748E>[Map] <#E7020C>Nexo Item <#ffffff>screwdriver<#E7020C>
+  wurde nicht gefunden.
+reloaded: <#62748E>[Map] <#99E603>Configs wurden neu geladen.
+feature-set: <#62748E>[Map] <#F1F3F3>Feature <#ffffff>{feature}<#F1F3F3> ist jetzt
+  {status}<#F1F3F3>.
+registered: <#62748E>[Map] <#99E603>{feature} <#ffffff>#{id}<#99E603> wurde eingetragen.
+register-prompt: <#62748E>[Map] <#F1F3F3>{feature} ist noch nicht eingetragen. <click:run_command:'{command}'><#ffffff>[Eintragen]</click>
+removed: <#62748E>[Map] <#E7020C>{feature} <#ffffff>#{id}<#E7020C> wurde ausgetragen.
+velocity-changed: <#62748E>[Map] <#F1F3F3>Trampolin Velocity ist jetzt <#ffffff>{velocity}<#F1F3F3>.
+pad-updated: <#62748E>[Map] <#99E603>Pad <#ffffff>#{id}<#99E603> wurde aktualisiert.
+state:
+  active: <#99E603>aktiv
+  inactive: <#E7020C>inaktiv
+status:
+  header: <#E229FB>Lobby Map Status
+  sounds: '<#62748E>[Map] <#F1F3F3>Sounds: {status}'
+  particles: '<#62748E>[Map] <#F1F3F3>Particles: {status}'
+  trampolin: '<#62748E>[Map] <#F1F3F3>Trampolin: {status}'
+  pad: '<#62748E>[Map] <#F1F3F3>Pad: {status}'
+  loop-sounds: '<#62748E>[Map] <#F1F3F3>Loop Sounds: {status}'
+  particle-spawners: '<#62748E>[Map] <#F1F3F3>Particle Spawner: {status}'
+  pushback: '<#62748E>[Map] <#F1F3F3>Pushback: {status}'
+setup:
+  item-name: <yellow>Bosch Schraubenzieher
+  lore:
+    id: '<#F1F3F3>ID: <#ffffff>{id}'
+    type: '<#F1F3F3>Typ: <#ffffff>{type}'
+    x-velocity: '<#F1F3F3>X Velocity: <#ffffff>{velocity}'
+    y-velocity: '<#F1F3F3>Y Velocity: <#ffffff>{velocity}'
+    direction: '<#F1F3F3>Richtung: <#ffffff>{direction}'
+    strength: '<#F1F3F3>Stärke: <#ffffff>{strength}'
+    duration: '<#F1F3F3>Dauer: <#ffffff>{duration} Ticks'
+  trampolin:
+    title: '<white><font:tmp:inventories></font><dark_gray>Tramplin ID: {id}'
+    item-name: <yellow>Trampolin
+    velocity-increase: <yellow>Velocity +0.5
+    velocity-decrease: <yellow>Velocity -0.5
+  pad:
+    title: '<white><font:tmp:inventories></font><dark_gray>Pad ID: {id}'
+    item-name: <yellow>Pad
+    type-relative: <yellow>Relative Velocity
+    type-fixed: <yellow>Fixed Velocity
+    type-speed: <yellow>Speed
+    x-velocity-increase: <yellow>X Velocity +0.5
+    x-velocity-decrease: <yellow>X Velocity -0.5
+    y-velocity-increase: <yellow>Y Velocity +0.5
+    y-velocity-decrease: <yellow>Y Velocity -0.5
+    strength-increase: <yellow>Stärke +0.5
+    strength-decrease: <yellow>Stärke -0.5
+    duration-increase: <yellow>Dauer +10 Ticks
+    duration-decrease: <yellow>Dauer -10 Ticks
+    direction: <yellow>{direction}
+  remove: <#E7020C>Austragen
+not-found: <#62748E>[Map] <#E7020C>Eintrag <#ffffff>{name}<#E7020C> wurde nicht gefunden.
+teleported: <#62748E>[Map] <#99E603>Du wurdest zu <#ffffff>{name}<#99E603> teleportiert.
+loop-sound-created: <#62748E>[Map] <#99E603>Loop Sound <#ffffff>{name}<#99E603> wurde
+  erstellt.
+loop-sound-removed: <#62748E>[Map] <#E7020C>Loop Sound <#ffffff>{name}<#E7020C> wurde
+  entfernt.
+loop-sound-list-header: <#E229FB>Loop Sounds
+loop-sound-list-entry: <#62748E>[Map] <click:run_command:'{command}'><#F1F3F3>- <#ffffff>{name}</click>
+particle-created: <#62748E>[Map] <#99E603>Particle Spawner <#ffffff>{name}<#99E603>
+  wurde erstellt.
+particle-removed: <#62748E>[Map] <#E7020C>Particle Spawner <#ffffff>{name}<#E7020C>
+  wurde entfernt.
+particle-list-header: <#E229FB>Particle Spawner
+particle-list-entry: <#62748E>[Map] <click:run_command:'{command}'><#F1F3F3>- <#ffffff>{name}</click>
+invalid-number: <#62748E>[Map] <#E7020C><#ffffff>{value}<#E7020C> ist keine gültige
+  Zahl.
+invalid-particle: <#62748E>[Map] <#E7020C>Particle <#ffffff>{value}<#E7020C> wurde
+  nicht gefunden.
+invalid-world: <#62748E>[Map] <#E7020C>Welt <#ffffff>{world}<#E7020C> wurde nicht
+  gefunden.
+syntax:
+  set: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map set <all/sounds/particles/loop-sound/particle-spawner/furniture/trampolin/pad>
+    <true/false>'
+  register: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map register <trampolin/pad>
+    <world> <x> <y> <z>'
+  loop-sound: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map loop-sound <create/remove/list>'
+  loop-sound-create: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map loop-sound create
+    <name> <sound> <interval-ticks> <radius>'
+  loop-sound-remove: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map loop-sound remove
+    <name>'
+  particle: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map particle <create/remove/list>'
+  particle-create: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map particle create
+    <name> <type> <interval-ticks> <radius>'
+  particle-remove: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map particle remove
+    <name>'
+  pushback: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map pushback <create/remove/list>'
+  pushback-create: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map pushback create
+    <name> <radius> <velocity x> <velocity y>'
+  pushback-remove: '<#62748E>[Map] <#E7020C>Syntax: <#ffffff>/map pushback remove
+    <name>'
+pushback-created: <#62748E>[Map] <#99E603>Pushback <#ffffff>{name}<#99E603> wurde
+  erstellt.
+pushback-removed: <#62748E>[Map] <#E7020C>Pushback <#ffffff>{name}<#E7020C> wurde
+  entfernt.
+pushback-list-header: <#E229FB>Pushbacks
+pushback-list-entry: <#62748E>[Map] <click:run_command:'{command}'><#F1F3F3>- <#ffffff>{name}</click>
+help:
+  root:
+    header: <#E229FB>Map Commands
+    '1': <#62748E>[Map] <#ffffff>/map setup <#F1F3F3>- Setup Item geben oder entfernen
+    '2': <#62748E>[Map] <#ffffff>/map status <#F1F3F3>- Feature Status anzeigen
+    '3': <#62748E>[Map] <#ffffff>/map set <feature> <true/false> <#F1F3F3>- Feature
+      aktivieren oder deaktivieren
+    '4': <#62748E>[Map] <#ffffff>/map reload <#F1F3F3>- Configs neu laden
+    '5': <#62748E>[Map] <#ffffff>/map loop-sound <create/remove/list> <#F1F3F3>- Loop
+      Sounds verwalten
+    '6': <#62748E>[Map] <#ffffff>/map particle <create/remove/list> <#F1F3F3>- Particle
+      Spawner verwalten
+    '7': <#62748E>[Map] <#ffffff>/map pushback <create/remove/list> <#F1F3F3>- Pushbacks
+      verwalten
+  set:
+    header: <#E229FB>Map Set Commands
+    '1': <#62748E>[Map] <#ffffff>/map set <all/sounds/particles/loop-sound/particle-spawner/pushback/furniture/trampolin/pad>
+      <true/false>
+    '2': '<#62748E>[Map] <#F1F3F3>Beispiel: <#ffffff>/map set pushback true'
+  register:
+    header: <#E229FB>Register Commands
+    '1': <#62748E>[Map] <#ffffff>/map register trampolin <world> <x> <y> <z>
+    '2': <#62748E>[Map] <#ffffff>/map register pad <world> <x> <y> <z>
+  loop-sound:
+    header: <#E229FB>Loop Sound Commands
+    '1': <#62748E>[Map] <#ffffff>/map loop-sound create <name> <sound> <interval-ticks>
+    '2': <#62748E>[Map] <#ffffff>/map loop-sound remove <name>
+    '3': <#62748E>[Map] <#ffffff>/map loop-sound list
+    '4': <#62748E>[Map] <#ffffff>/map loop-sound teleport <name>
+  particle:
+    header: <#E229FB>Particle Commands
+    '1': <#62748E>[Map] <#ffffff>/map particle create <name> <type> <interval-ticks>
+      <radius>
+    '2': <#62748E>[Map] <#ffffff>/map particle remove <name>
+    '3': <#62748E>[Map] <#ffffff>/map particle list
+    '4': <#62748E>[Map] <#ffffff>/map particle teleport <name>
+  pushback:
+    header: <#E229FB>Pushback Commands
+    '1': <#62748E>[Map] <#ffffff>/map pushback create <name> <radius> <velocity x>
+      <velocity y>
+    '2': <#62748E>[Map] <#ffffff>/map pushback remove <name>
+    '3': <#62748E>[Map] <#ffffff>/map pushback list
+    '4': <#62748E>[Map] <#ffffff>/map pushback teleport <name>

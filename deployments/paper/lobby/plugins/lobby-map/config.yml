@@ -1,0 +1,59 @@
+# General Settings
+target-map: chunkexplorer_lobby
+
+# Features
+features:
+  particles: true
+sounds:
+  enabled: true
+  feedback:
+    success:
+      sound: minecraft:block.note_block.pling
+      volume: 0.8
+      pitch: 1.4
+      mode: rotate
+      sounds:
+      - sound: minecraft:block.note_block.pling
+        channel: MASTER
+        volume: 0.8
+        pitch: 1.4
+    error:
+      sound: minecraft:block.note_block.bass
+      volume: 0.8
+      pitch: 0.7
+      mode: random
+      sounds:
+      - sound: minecraft:block.note_block.bass
+        channel: MASTER
+        volume: 0.8
+        pitch: 0.7
+  inventory:
+    open:
+      sound: minecraft:block.chest.open
+      volume: 0.7
+      pitch: 1.1
+    click:
+      sound: minecraft:ui.button.click
+      volume: 0.6
+      pitch: 1.2
+    remove:
+      sound: minecraft:entity.item.break
+      volume: 0.8
+      pitch: 0.9
+particles:
+  enabled: true
+furniture:
+  trampolin:
+    enabled: true
+    furniture-list:
+    - nexo:trampolin
+  pad:
+    enabled: true
+    furniture-list:
+    - nexo:pad
+loop-sounds:
+  enabled: true
+particle-spawners:
+  enabled: true
+pushback:
+  enabled: true

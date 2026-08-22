@@ -12,15 +12,15 @@ resourcePack:
     packObjectKey: explorer/latest.zip
 spawn:
   postgresDSN: ${postgres_dsn}
-  world: blueprint
+  world: chunkexplorer_lobby
   location:
     x: 0.5
-    y: -60.0
-    z: 0.5
+    y: 65.0
+    z: 1.5
   roboLocation:
-    x: 0.5
-    y: -59.75
-    z: 5.5
+    x: -9.5
+    y: 65.0
+    z: -8.5
 matchmaking:
   endpoint: mm.explorer.svc.cluster.local:6789
   gatewayAddress: w1.c1.prd.infra.chunks.cloud:30577
