@@ -1,0 +1,151 @@
+Experimental: #test
+  packets:
+    disable_netty_injection: false
+debug: false
+Plugin:
+  language: english
+  keep_this_up_to_date: true
+  formatting:
+    action_bar: true
+    chats:
+      player_chat: true
+      system_chat: true
+      standard_tags: false
+    cursor: false
+    villagers: true
+    translatable: false
+    dialog: true
+    anvil: true
+    tablist: true
+    bossbar: true
+    scoreboard: true
+    packet_events: true
+    entity_data: true
+    items:
+      itemname: true
+      lore: true
+      customname: true
+  packets:
+    disable_glyph_handler: false
+WorldEdit:
+  fawe_hook: true
+  customblock_mechanic: true
+  furniture_mechanic: true
+Glyphs:
+  default_gif_type: SPRITE
+  emoji_book_size: 255
+  emoji_list_permission_only: true
+  unicode_completions: true
+  default_permission: nexo.glyphs.<glyphid>
+  default_font: nexo:default
+  default_shadow_color: '#00000000'
+  hover_text: ''
+  shift_font: nexo:shift
+ConfigTools:
+  generate_default_configs: false
+  disable_automatic_model_data: false
+  disable_automatic_glyph_code: false
+  initial_custom_model_data: 10000
+  skipped_model_data_numbers: []
+  error_item:
+    material: PODZOL
+    injectId: false
+CustomArmor:
+  type: COMPONENT
+  auto_assign_settings: true
+ItemUpdater:
+  update_items: true
+  update_items_on_reload: true
+  update_tile_entity_contents: true
+  update_entity_contents: true
+  override_item_lore: false
+Misc:
+  hide_scoreboard_numbers: true
+  hide_scoreboard_background: true
+  hide_tablist_background: false
+  block_other_resourcepacks: false
+  default_language_key: en_us
+Recipes:
+  keep_track_of_player_furnace: false
+  furnace_cooldown_duration: 1s
+  require_player_if_permission: true
+  reset_recipes: true
+  add_recipes_to_book: true
+  default_allow_in_vanilla_recipes: false
+Pack:
+  generation:
+    skip_unsupported_overlays: false
+    legacy_atlas: true
+    merge_textures: NONE
+    force_oversized_in_gui: false
+    generate_pack: true
+    output_path: plugins/Nexo/pack/pack.zip
+    prefer_item_models: true
+    minimize_json: false
+    read_lenient: true
+    excluded_file_extensions:
+    - .zip
+    - .tar.gz
+    - .psd
+    packsquash:
+      enabled: false
+      executable_path: plugins/Nexo/pack/packsquash/packsquash
+      settings_path: plugins/Nexo/pack/packsquash/packsquash.toml
+      cache_size: 5
+  obfuscation:
+    type: NONE
+    cache: true
+  import:
+    default_assets: false
+    external_packs: false
+    from_location: []
+    from_url: []
+    external_pack_order: []
+    model_engine: true
+  validate:
+    silent_uv_clamping: false
+    texture_mipnap: true
+    models: true
+    fonts: true
+    atlas: true
+    languages: true
+  server:
+    hermes:
+      server: hermes.nexomc.com
+    type: s3
+    selfhost:
+      public_address: ''
+      port: 8082
+      dispatch_threads: 10
+    polymath:
+      server: atlas.nexomc.com
+      secret: nexomc
+    lobfile:
+      api_key: API-KEY
+    s3:
+      endpoint_url: ${s3_packs_endpoint}
+      path_style: false
+      chunked_encoding: true
+      public_url: https://spc-packs-prd.fsn1.your-objectstorage.com
+      region: ${s3_packs_region}
+      bucket: ${s3_packs_bucket}
+      secret_key: ${s3_packs_secret_key}
+      access_key: ${s3_packs_access_key}
+      url_expiration: 7d
+  dispatch:
+    send_pre_join: true
+    send_on_join: false
+    send_on_reload: false
+    delay: -1
+    mandatory: true
+    prompt: Accept the pack to enjoy a full experience
+Furniture:
+  allowed_gamemodes_for_rotation:
+  - SURVIVAL
+  - CREATIVE
+  anti_cheat:
+    spartan_hook: false
+    vulcan_hook: false
+  remove_invalid_furniture: false
+  invalid_furniture_item:
+    material: BARRIER

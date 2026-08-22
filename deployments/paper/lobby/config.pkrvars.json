@@ -1,10 +1,10 @@
 {
   "name": "lobby",
-  "version": "2026.34.1",
+  "version": "2026.34.2",
   "paper_version": "26.2-84",
   "files": [
     {
-      "source": "spc-mc/plugins/paper/lobby-2026.32.3.jar",
+      "source": "spc-mc/plugins/paper/lobby-2026.34.1-test1.jar",
       "destination": "/opt/paper/plugins/lobby.jar"
     },
     {
@@ -18,6 +18,10 @@
     {
       "source": "spc-mc/plugins/paper/voicechat-bukkit-2.6.21.jar",
       "destination": "/opt/paper/plugins/voicechat-bukkit-2.6.21.jar"
+    },
+    {
+      "source": "spc-mc/plugins/paper/alpacker-2026.34.1.jar",
+      "destination": "/opt/paper/plugins/alpacker-2026.34.1.jar"
     }
   ]
 }
