@@ -1,10 +1,10 @@
 list:
 - name: queue.list.1
   enabled: true
-  radius: 3.0
+  radius: 1.0
   velocity:
-    x: 1.0
-    y: 1.0
+    x: 0.5
+    y: 0.5
   location:
     x: 9.5
     y: 62.0
@@ -16,10 +16,10 @@ list:
     pitch: 1.0
 - name: queue.list.2
   enabled: true
-  radius: 3.0
+  radius: 1.0
   velocity:
-    x: 1.0
-    y: 1.0
+    x: 0.5
+    y: 0.5
   location:
     x: 12.5
     y: 62.0
@@ -31,10 +31,10 @@ list:
     pitch: 1.0
 - name: queue.list.3
   enabled: true
-  radius: 3.0
+  radius: 1.0
   velocity:
-    x: 1.0
-    y: 1.0
+    x: 0.5
+    y: 0.5
   location:
     x: 13.5
     y: 62.0
@@ -46,10 +46,10 @@ list:
     pitch: 1.0
 - name: chunk.scoreboard
   enabled: true
-  radius: 3.0
+  radius: 1.0
   velocity:
-    x: 1.0
-    y: 1.0
+    x: 0.5
+    y: 0.5
   location:
     x: -10.5
     y: 62.0
@@ -57,8 +57,8 @@ list:
   sound:
     sound: spacechunks-extended:lobby.pushback
     channel: MASTER
-    volume: 1.0
-    pitch: 1.0
+    volume: 0.5
+    pitch: 0.5
 - name: news.npc
   enabled: true
   radius: 1.0
