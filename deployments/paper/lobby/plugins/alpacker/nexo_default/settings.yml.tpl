@@ -112,7 +112,7 @@ Pack:
   server:
     hermes:
       server: hermes.nexomc.com
-    type: s3
+    type: hermes
     selfhost:
       public_address: ''
       port: 8082
