@@ -18,7 +18,7 @@
 language: en
 
 # Enables maintenance mode.
-maintenance-enabled: true
+maintenance-enabled: false
 
 # Enables maintenance on certain servers managed by your proxy instance(s).
 proxied-maintenance-servers:
