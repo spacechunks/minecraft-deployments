@@ -1,6 +1,6 @@
 {
   "name": "lobby",
-  "version": "2026.34.7",
+  "version": "2026.34.8",
   "paper_version": "26.2-112",
   "files": [
     {
@@ -8,8 +8,8 @@
       "destination": "/opt/paper/plugins/lobby.jar"
     },
     {
-      "source": "spc-mc/plugins/paper/nexo-1.20-dev-1d9a9712.jar",
-      "destination": "/opt/paper/plugins/nexo-1.20-dev-1d9a9712.jar"
+      "source": "spc-mc/plugins/paper/nexo-1.25.jar",
+      "destination": "/opt/paper/plugins/nexo-1.25.jar"
     },
     {
       "source": "spc-mc/plugins/paper/bettermodel-3.2.0.jar",
