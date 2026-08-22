@@ -6,7 +6,7 @@
 general:
   periodic-pulls:
     enabled: true
-    interval: 1m
+    interval: 10m
     build-after-pull: true
   startup-auto-build:
     enabled: true
