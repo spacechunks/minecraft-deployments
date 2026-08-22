@@ -26,7 +26,7 @@ matchmaking:
   gatewayAddress: w1.c1.prd.infra.chunks.cloud:30577
   ticketPollIntervalSeconds: 1
 controlPlane:
-  endpoint: api.explorer.chunks.space:443
+  endpoint: explorer.api.chunks.space:443
   instancePollIntervalSeconds: 1
   auth:
     clientId: ${control_plane_api_client_id}
