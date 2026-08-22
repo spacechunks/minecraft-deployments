@@ -1,0 +1,76 @@
+list:
+- name: queue.list.1
+  enabled: true
+  radius: 3.0
+  velocity:
+    x: 1.0
+    y: 1.0
+  location:
+    x: 9.5
+    y: 62.0
+    z: -18.5
+  sound:
+    sound: spacechunks-extended:lobby.pushback
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+- name: queue.list.2
+  enabled: true
+  radius: 3.0
+  velocity:
+    x: 1.0
+    y: 1.0
+  location:
+    x: 12.5
+    y: 62.0
+    z: -19.5
+  sound:
+    sound: spacechunks-extended:lobby.pushback
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+- name: queue.list.3
+  enabled: true
+  radius: 3.0
+  velocity:
+    x: 1.0
+    y: 1.0
+  location:
+    x: 13.5
+    y: 62.0
+    z: -22.5
+  sound:
+    sound: spacechunks-extended:lobby.pushback
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+- name: chunk.scoreboard
+  enabled: true
+  radius: 3.0
+  velocity:
+    x: 1.0
+    y: 1.0
+  location:
+    x: -10.5
+    y: 62.0
+    z: -20.5
+  sound:
+    sound: spacechunks-extended:lobby.pushback
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+- name: news.npc
+  enabled: true
+  radius: 1.0
+  velocity:
+    x: 0.5
+    y: 0.5
+  location:
+    x: 13.5
+    y: 65.0
+    z: -9.5
+  sound:
+    sound: spacechunks-extended:lobby.pushback
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0

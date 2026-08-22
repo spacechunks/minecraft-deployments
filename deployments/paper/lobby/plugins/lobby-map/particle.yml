@@ -1,0 +1,70 @@
+list:
+- name: lab.smoke
+  enabled: true
+  interval-ticks: 5
+  location:
+    x: -45.5
+    y: 66.0
+    z: -29.5
+  particle:
+    type: CAMPFIRE_COSY_SMOKE
+    amount: 8
+    offset:
+      x: 0.35
+      y: 0.15
+      z: 0.35
+    speed: 0.02
+  radius:
+    enabled: true
+    size: 3.0
+    points: 16
+  random:
+    enabled: true
+    chance-per-location: 0.2
+    max-locations-per-interval: 8
+- name: satelite.1
+  enabled: true
+  interval-ticks: 5
+  location:
+    x: 4.893528134563715
+    y: 71.37806796669857
+    z: -63.1337052348755
+  particle:
+    type: CAMPFIRE_COSY_SMOKE
+    amount: 12
+    offset:
+      x: 0.08
+      y: 0.2
+      z: 0.08
+    speed: 0.01
+  radius:
+    enabled: true
+    size: 2.0
+    points: 16
+  random:
+    enabled: true
+    chance-per-location: 0.2
+    max-locations-per-interval: 4
+- name: satelite.2
+  enabled: true
+  interval-ticks: 5
+  location:
+    x: -3.931664732482558
+    y: 78.87665568012265
+    z: -66.9232794777781
+  particle:
+    type: CAMPFIRE_COSY_SMOKE
+    amount: 12
+    offset:
+      x: 0.08
+      y: 0.2
+      z: 0.08
+    speed: 0.01
+  radius:
+    enabled: true
+    size: 2.0
+    points: 16
+  random:
+    enabled: true
+    chance-per-location: 0.2
+    max-locations-per-interval: 4

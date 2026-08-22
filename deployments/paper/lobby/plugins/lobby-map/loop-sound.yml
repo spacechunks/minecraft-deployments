@@ -1,0 +1,37 @@
+list:
+- name: lab.drilling
+  enabled: true
+  interval-ticks: 100
+  location:
+    x: -43.0
+    y: 66.0
+    z: -29.0
+  sound:
+    sound: spacechunks-extended:ambient.lab.drilling
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+- name: lab.alarm
+  enabled: true
+  interval-ticks: 600
+  location:
+    x: -43.0
+    y: 66.0
+    z: -29.0
+  sound:
+    sound: spacechunks-extended:ambient.lab.alarm
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+- name: event.party
+  enabled: true
+  interval-ticks: 361
+  location:
+    x: 48.70068477792668
+    y: 66.0
+    z: -29.594873506736096
+  sound:
+    sound: spacechunks-extended:ambient.event.party
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0

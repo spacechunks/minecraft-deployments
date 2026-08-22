@@ -1,0 +1,113 @@
+list:
+- id: 1
+  type: relative-velocity
+  location:
+    x: 25.0
+    y: 65.0
+    z: -30.0
+  x-velocity: 2.0
+  y-velocity: 1.0
+  sound:
+    sound: spacechunks-extended:furniture.pad.jump
+    channel: MASTER
+    volume: 3.0
+    pitch: 1.0
+  particles:
+    enabled: false
+    type: CLOUD
+    amount: 12
+    offset:
+      x: 0.35
+      y: 0.15
+      z: 0.35
+    speed: 0.02
+- id: 2
+  type: relative-velocity
+  location:
+    x: 0.0
+    y: 65.0
+    z: -4.0
+  x-velocity: 2.0
+  y-velocity: 1.0
+  sound:
+    sound: spacechunks-extended:furniture.pad.jump
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+  particles:
+    enabled: false
+    type: CLOUD
+    amount: 12
+    offset:
+      x: 0.35
+      y: 0.15
+      z: 0.35
+    speed: 0.02
+- id: 3
+  type: fixed-velocity
+  location:
+    x: 30.0
+    y: 67.0
+    z: -50.0
+  x-velocity: 0.5
+  y-velocity: 1.0
+  direction: east
+  sound:
+    sound: spacechunks-extended:furniture.pad.jump
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+  particles:
+    enabled: false
+    type: CLOUD
+    amount: 12
+    offset:
+      x: 0.35
+      y: 0.15
+      z: 0.35
+    speed: 0.02
+- id: 4
+  type: fixed-velocity
+  location:
+    x: -22.0
+    y: 68.0
+    z: -58.0
+  x-velocity: 0.5
+  y-velocity: 1.5
+  direction: north
+  sound:
+    sound: spacechunks-extended:furniture.pad.jump
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+  particles:
+    enabled: false
+    type: CLOUD
+    amount: 12
+    offset:
+      x: 0.35
+      y: 0.15
+      z: 0.35
+    speed: 0.02
+- id: 5
+  type: relative-velocity
+  location:
+    x: -26.0
+    y: 66.0
+    z: -30.0
+  x-velocity: 2.0
+  y-velocity: 1.0
+  sound:
+    sound: spacechunks-extended:furniture.pad.jump
+    channel: MASTER
+    volume: 1.0
+    pitch: 1.0
+  particles:
+    enabled: false
+    type: CLOUD
+    amount: 12
+    offset:
+      x: 0.35
+      y: 0.15
+      z: 0.35
+    speed: 0.02
