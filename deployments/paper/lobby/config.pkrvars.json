@@ -1,6 +1,6 @@
 {
   "name": "lobby",
-  "version": "2026.34.23",
+  "version": "2026.34.24",
   "paper_version": "26.2-112",
   "files": [
     {
@@ -20,7 +20,7 @@
       "destination": "/opt/paper/plugins/voicechat-bukkit-2.6.21.jar"
     },
     {
-      "source": "spc-mc/plugins/paper/alpacker-2026.34.1.jar",
+      "source": "spc-mc/plugins/paper/alpacker-2026.34.2.jar",
       "destination": "/opt/paper/plugins/alpacker-2026.34.1.jar"
     },
     {
