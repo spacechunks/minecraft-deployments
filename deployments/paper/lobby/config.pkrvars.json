@@ -1,7 +1,7 @@
 {
   "name": "lobby",
-  "version": "2026.34.6",
-  "paper_version": "26.2-84",
+  "version": "2026.34.7",
+  "paper_version": "26.2-112",
   "files": [
     {
       "source": "spc-mc/plugins/paper/lobby-2026.34.1-test1.jar",
