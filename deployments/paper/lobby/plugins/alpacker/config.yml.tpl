@@ -59,3 +59,11 @@ bundles:
           prefixes:
             - ".DS_Store"
             - "_template"
+      - name: bettermodel
+        type: RESOURCEPACK
+        source: local
+        path: "plugins/BetterModel/build.zip"
+        delete-files:
+          prefixes:
+            - ".DS_Store"
+            - "_template"
