@@ -112,7 +112,7 @@ Pack:
   server:
     hermes:
       server: hermes.nexomc.com
-    type: hermes
+    type: polymath
     selfhost:
       public_address: ''
       port: 8082
