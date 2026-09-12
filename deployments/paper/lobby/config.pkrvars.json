@@ -1,6 +1,6 @@
 {
   "name": "lobby",
-  "version": "2026.35.1",
+  "version": "2026.37.1",
   "paper_version": "26.2-112",
   "files": [
     {
@@ -26,6 +26,10 @@
     {
       "source": "spc-mc/plugins/paper/lobby-map-2026.34.1.jar",
       "destination": "/opt/paper/plugins/lobby-map-2026.34.1.jar"
+    },
+    {
+      "source": "spc-mc/plugins/paper/luckperms-bukkit-5.5.82.jar",
+      "destination": "/opt/paper/plugins/luckperms-bukkit-5.5.82.jar"
     }
   ]
 }
