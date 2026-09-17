@@ -1,7 +1,7 @@
 {
   "name": "gateway",
-  "version": "2026.38.1",
-  "velocity_version": "3.5.0-SNAPSHOT-605",
+  "version": "2026.38.2",
+  "velocity_version": "4.2.1-SNAPSHOT-31",
   "files": [
     {
       "source": "spc-mc/plugins/velocity/gateway-0.1.0.jar",
