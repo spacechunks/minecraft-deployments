@@ -4,9 +4,10 @@ If there is a new Minecraft version, ensure the steps below are completed. Order
 of time.
 
 - [ ] Update resource pack
-- [ ] Update ViaVersion 
+- [ ] Update Velocity
+  - [ ] Check if Java version has been bumped
   - [ ] Lobby proxy
   - [ ] Gateway
-- [ ] Update Velocity
+- [ ] Update ViaVersion 
   - [ ] Lobby proxy
   - [ ] Gateway
