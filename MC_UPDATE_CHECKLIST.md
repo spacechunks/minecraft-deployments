@@ -11,3 +11,6 @@ of time.
 - [ ] Update ViaVersion 
   - [ ] Lobby proxy
   - [ ] Gateway
+- [ ] Deploy to staging
+- [ ] Verify everything works on staging
+- [ ] Deploy to prod
