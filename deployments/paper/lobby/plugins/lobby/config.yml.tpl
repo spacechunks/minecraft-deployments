@@ -26,7 +26,7 @@ spawn:
     yaw: 0
 matchmaking:
   endpoint: mm.explorer.svc.cluster.local:6789
-  gatewayAddress: w1.c1.prd.infra.chunks.cloud:30577
+  gatewayAddress: w2.c1.prd.infra.chunks.cloud:30577
   ticketPollIntervalSeconds: 1
 controlPlane:
   endpoint: explorer.api.chunks.space:443
